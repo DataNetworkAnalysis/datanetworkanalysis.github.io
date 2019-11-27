@@ -24,7 +24,7 @@ print_hi('Tom')
 test 이거는 highlight 되나?
 ```
 
-```{python}
+```python
 import pandas as pd
 
 df = pd.read_csv('input/data.csv')
