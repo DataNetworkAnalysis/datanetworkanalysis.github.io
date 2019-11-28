@@ -106,20 +106,12 @@ How to save and use a trained model
 
 ## 참고자료
 
-
-**김성훈 교수님의 모두의 딥러닝**
 아래 강의를 듣고 오면 더 많은 정보를 얻어가실 수 있습니다.
 
-[모두를 위한 머신러닝/딥러닝 강의](https://hunkim.github.io/ml/)
+- [모두를 위한 머신러닝/딥러닝 강의](https://hunkim.github.io/ml/)
 
-**주재걸 교수님의 선형대수 강의**
+- [주재걸 교수님의 선형대수 강의](https://www.edwith.org/linearalgebra4ai)
 
-[](https://www.edwith.org/linearalgebra4ai)
+- [파이썬 (Python) 으로 배우는 프로그래밍 기초 (CS101) 강의목록 : edwith](https://www.edwith.org/cs101/joinLectures/21778)
 
-**KAIST 전산학부 김문주 교수님의 Python 프로그래밍 기초 강의** 
-
-[파이썬 (Python) 으로 배우는 프로그래밍 기초 (CS101) 강의목록 : edwith](https://www.edwith.org/cs101/joinLectures/21778)
-
-**본 강의에서 사용되는 딥러닝 프레임워크 Keras 문서**
-
-[Home - Keras Documentation](https://keras.io/)
+- [Home - Keras Documentation](https://keras.io/)
