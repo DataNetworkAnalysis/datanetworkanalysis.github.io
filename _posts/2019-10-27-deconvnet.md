@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Visualizing and Understanding Convolutional Networks Korean Version(한국어버전)"
-date:   2019-11-20 18:10:00 +0800
+date:   2019-10-27 21:09:00 +0800
 categories: Paper
 tags: XAI
 ---
@@ -57,7 +57,7 @@ convnet의 특성을 다른 데이터셋에 일반화 하기 위해 사용하는
 
 <p align="center">
     <img src='http://drive.google.com/uc?export=view&id=11RyJChwP9_w2D6IlYRVF8DFg_GadQEEW' /><br>
-    *Fig. 3. 본 논문에 사용된 8 layer convnet model*
+    <i>Fig. 3. 본 논문에 사용된 8 layer convnet model</i>
 </p>
 
 이후 Training Details에서 더 자세히 나오지만 한 번에 설명하자면 AlexNet과 비슷한 구조를 사용했고, 몇가지 차이점이 있다. AlexNet은 GPU를 2개 사용하였고 여기서는 sparse connection을 사용한 layer 3,4,5를 dense connection으로 대체하였다. 가장 큰 차이는 첫 번째 레이어의 필터 크기를 7x7에서 5x5로 stirde를 4에서 2로 수정하였다는 것이다. 이를 통해 더 많은 정보를 유지할 수 있다.
@@ -105,7 +105,7 @@ convnet에서는 이전 레이어의 특성치를 전달하기위해 학습된 �
 
 <p align="center">
     <img src='http://drive.google.com/uc?export=view&id=1Z_aV-XWAFw9wV2XSwFHO1XxGHuItl2ZM' width="500"/><br>
-    *Fig. 1. deconvnet 과정*
+    <i>Fig. 1. deconvnet 과정</i>
 </p>
 
 이러한 deconvnet 과정을 통해 선택한 활성화로부터 입력값의 어느 부분에 영향이 있었는지 확인 할 수 있다. 그러나 이 방법의 단점은 레이어에 있는 활동들에 대한 것이 아닌 단일 활성화에 대해서만 시각화 할 수 있다는 점이다.
@@ -122,7 +122,7 @@ Fig. 2는 학습된 모델에 대해서 특성들의 시각화를 보여준다. 
 
 <p align="center">
     <img src='http://drive.google.com/uc?export=view&id=1IGMwXy_ckg2zUWtM9Cf_MABHetp-kDKV' width="400"/><br>
-    *Fig. 2. Visualization of features in a fully trained model. 가장 feature map이 잘 나타난 9개의 activation만 나타낸다.*  
+    <i>Fig. 2. Visualization of features in a fully trained model. 가장 feature map이 잘 나타난 9개의 activation만 나타낸다.</i>
 </p>
 
 **Feature Evolution during Training**
@@ -131,7 +131,7 @@ Fig.4. 에서는 모델을 학습하면서 중간중간 특성치를 추출하�
 
 <p align="center">
     <img src='http://drive.google.com/uc?export=view&id=1GlCRVecreTl3jvE4106wA7eaFcmhIZi7' /><br>
-    *Fig. 4.  학습 도중에 random하게 선택한 모델의 특성들의 변화를 나타낸다. epochs [1,2,5,10,20,30,40,64] 총 8번에 걸쳐 추출했다.*
+    <i>Fig. 4.  학습 도중에 random하게 선택한 모델의 특성들의 변화를 나타낸다. epochs [1,2,5,10,20,30,40,64] 총 8번에 걸쳐 추출했다.</i>
 </p>
 
 
@@ -141,7 +141,7 @@ Fig.5 에서는 5개의 샘플데이터를 수직으로 이동하거나 스케�
 
 <p align="center">
     <img src='https://drive.google.com/uc?export=view&id=1OXtr4u2q0eGr_CE-uin8VO40V-_PHEIu' /><br>
-    *Fig. 5. 2,3번째 열은 각각 첫 번째, 일곱 번째 레이어의 변화정도에 따른 원래값과의 euclidean distance이다. 4번째 열은 변화된 이미지의 실제값에 대한 확률이다.*
+    <i>Fig. 5. 2,3번째 열은 각각 첫 번째, 일곱 번째 레이어의 변화정도에 따른 원래값과의 euclidean distance이다. 4번째 열은 변화된 이미지의 실제값에 대한 확률이다.</i>
 </p>
 
 
@@ -153,7 +153,7 @@ Fig.7 는 이런 질문에 대한 대답을 하기 위한 실험이다. 회색 �
 
 <p align="center">
     <img src='https://drive.google.com/uc?export=view&id=1ZwWuKq9YzeF2gRof4bHBcA2kQR0xZdEb' /><br>
-    *Fig. 7. 피쳐맵에 대한 투영값을 시각화함으로써 입력 이미지의 어떤 부분에 초점을 맞추고 예측했는지 알 수 있다.*
+    <i>Fig. 7. 피쳐맵에 대한 투영값을 시각화함으로써 입력 이미지의 어떤 부분에 초점을 맞추고 예측했는지 알 수 있다.</i>
 </p>
 
 ## Correspondence Analysis
@@ -164,12 +164,12 @@ $$\Delta_{l} = \sum_{i,j=1,i\neq j}^5 \mathcal{H}(sign(\epsilon_i^l, sign(\epsil
 
 <p align="center">
     <img src='https://drive.google.com/uc?export=view&id=14Mu1vZHGb5av6YNvT_F8HXabpQp3yPbt' /><br>
-    *Fig. 8. 이미지의 일부분을 회색 박스로 가렸을 때 예측에 어떤 변화가 있는지 확인*
+    <i>Fig. 8. 이미지의 일부분을 회색 박스로 가렸을 때 예측에 어떤 변화가 있는지 확인</i>
 </p>
 
 <p align="center">
     <img src='https://drive.google.com/uc?export=view&id=1mxH5DpLyrPPJS8OSLulPXNOIs8PME4xz' /><br>
-    *Table 1. Occlusion Location에 대한 layer 5와 layer 7의 hamming distance*
+    <i>Table 1. Occlusion Location에 대한 layer 5와 layer 7의 hamming distance</i>
 </p>
 
 
@@ -181,14 +181,14 @@ $$\Delta_{l} = \sum_{i,j=1,i\neq j}^5 \mathcal{H}(sign(\epsilon_i^l, sign(\epsil
 
 <p align="center">
     <img src='https://drive.google.com/uc?export=view&id=1VRrUKXpuX5IdcgFrXbuRg6rste90NcIZ' /><br>
-    *Table 2. ImageNet 2012 clasification error rates. The ∗ indicates models that were trained on both ImageNet 2011 and 2012 training sets.*
+    <i>Table 2. ImageNet 2012 clasification error rates. The ∗ indicates models that were trained on both ImageNet 2011 and 2012 training sets.</i>
 </p>
 
 모델을 수정하면서 결과를 확인했다. FCN만 제외하거나 중간에 2개의 레이어를 제외한 경우 큰 차이는 없었지만 둘 다 제외하게 되면 차이가 많이나게 된다. 즉, 모델의 깊이가 성능에 영향이 있음을 나타낸다 그러나 너무 깊은 경우 과적합이 일어날 수 있다.
 
 <p align="center">
     <img src='https://drive.google.com/uc?export=view&id=1_TGtw-SV4cxttEIPhvSVXSUqeQlfyCAm' /><br>
-    *Table 3. ImageNet 2012 classification error rates with various architectural changes to the model of AlexNet and our model*
+    <i>Table 3. ImageNet 2012 classification error rates with various architectural changes to the model of AlexNet and our model</i>
 </p>
 
 ## Feature Generalization
@@ -197,26 +197,26 @@ Caltech-101 데이터셋에 대해서 비교했을때 ImageNet 데이터셋을 �
 
 <p align="center">
     <img src='https://drive.google.com/uc?export=view&id=1SJwyVWLpppEc7uAO88-VNart2F5trYSc' /><br>
-    *Table 4. Caltech-101 classiﬁcation accuracy for our convnet models, against two leading alternate approaches.*
+    <i>Table 4. Caltech-101 classiﬁcation accuracy for our convnet models, against two leading alternate approaches.</i>
 </p>
 
 Caltech-256 데이터셋 또한 마찬가지였다. 심지어 클래스당 6개의 이미지만으로도 다른 두 모델의 클래스별 60장씩 학습한 것보다 좋은 성능을 내었다.
 
 <p align="center">
     <img src='https://drive.google.com/uc?export=view&id=1RPju7qIsnq7CG3nKSQZjemJKhn4aQmsQ' /><br>
-    *Table 5. Caltech 256 classiﬁcation accuracies.*
+    <i>Table 5. Caltech 256 classiﬁcation accuracies.</i>
 </p>
 
 <p align="center">
     <img src='https://drive.google.com/uc?export=view&id=1IZuS11rGoS3TtETtIr2g-MZxjf2yEgkN' /><br>
-    *Fig. 9. Caltech-256 classiﬁcation performance as the number of training images per class is varied. *
+    <i>Fig. 9. Caltech-256 classiﬁcation performance as the number of training images per class is varied. </i>
 </p>
 
 PASCAL 2012 데이터셋은 한 개의 이미지에 여러 물체가 들어있기도 하고 ImageNet과 이미지가 다른편이다. 그래서 PASCAL SOTA 모델 보다는 좋은 결과를 낼 수는 없었지만 몇몇 class에서는 더 높은 확률로 분류해내었다. 
 
 <p align="center">
     <img src='https://drive.google.com/uc?export=view&id=1XYi4RMyaEuBOqjVSZrukF-sj39x-KNBD' /><br>
-    *Table 6. PASCAL 2012 classiﬁcation results, comparing our Imagenet-pretrained convnet against the leading two methods ([A]= (Sande et al., 2012) and [B] = (Yan et al., 2012)).*
+    <i>Table 6. PASCAL 2012 classiﬁcation results, comparing our Imagenet-pretrained convnet against the leading two methods ([A]= (Sande et al., 2012) and [B] = (Yan et al., 2012)).</i>
 </p>
 
 # Discussion
