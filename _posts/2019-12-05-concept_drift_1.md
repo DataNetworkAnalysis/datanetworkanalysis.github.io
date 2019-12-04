@@ -18,7 +18,7 @@ concept drift의 또다른 문제는 noise와 착각하기 쉽다는 점이다. 
 
 concept drift를 다루기위한 이상적인 방법은 크게 3가지가 있다.
 
-1. *빠르게 concept drift를 처리하는것*
+1. *빠르게 concept drift를 처리하는 것*
 2. *concept drift와 noise를 따로 구분하고 noise에 robust할 것*
 3. *반복되는 context를 확인하고 처리하는 것*
 
@@ -32,9 +32,9 @@ concept drift를 다루기위한 이상적인 방법은 크게 3가지가 있다
 
 처음으로 concept drift를 시도한 것은 **STAGGER**, **FLORA** 그리고 **IB3** 일것이다. 이 세가지 방법은 사용할 수 있는 시스템이 서로 다르다. 
 
-1. *instance selection*
-2. *instance weighting*
-3. *ensemble learning*
+1. *Instance selection*
+2. *Instance weighting*
+3. *Ensemble learning*
 
 **Instance selection**은 가장 일반적으로 사용되는 방법이다. 바로 가장 가까운 미래만 예측하는 것이다. 정해진 윈도우 사이즈를 가지고 현재 concept를 학습하고 바로 직후의 미래를 예측하는 것이다. **FLORA**, **FRANN** 그리고 **Time-Windowed Forgetting**이 대표적이다. 
 
@@ -50,7 +50,7 @@ concept drift를 다루기위한 이상적인 방법은 크게 3가지가 있다
 
 **Lazy learning**은 concept drift를 다루기 유리한 이점이 크게 세 가지가 있다. 첫 번째로 여러 하위유형으로 분류되어있는 스팸과같은 명확하지 않은 concept에 잘 적용될 수 있다. 두 번째로는 lazy learning에서 case-base는 업데이트하기가 쉽다는 점이다(여기서 case-base란 lazy learning의 특징을 말하는것같다. 앞서 언급한 예시 참고). 예를 들면 새로운 스팸이 등장하는 경우를 말한다. 세 번째는 특정 유형의 문제에 대한 지식을 공유하는 것이 쉽기때문에 다양한 가능성을 가진 case-base들 더 쉽게 유지할 수 있다는 것이다. 이러한 instance-based learning은 비모수적인 학습 방법으로 정확도를 높이기위해서는 더많은 instance를 필요하다라고 저평가되었지만 instance가 많으면 이러한 문제는 해결된다. 
 
-Concept drift를 다루기위한 첫 instance-based learning 방법은 IB3이다. **IB3**는 정확히 분류된 것이 얼마나 있는지 확인하고 해당 클래스의 빈도수를 비교하여 noise가 있거나 오래된 케이스는 버리면서 케이스를 유지한다. **IB3**는 점진적인(gradual) concept drift에 대해서만 사용될 수 있고 적용이 상대적으로 느리다는 점에서 비판을 받았다. Salganicoff의 **Local Weighted Forgetting (LWF)**는 오래된 instance는 비활성화하지만 이것도 단지 유사한 새 instance가 나타났을때만 해당한다. **Prediction Error Context Switching (PECS)**는 **LWF**와 비슷하지만 instance에 대한 정확도를 고려한다. 그리고 추가적으로 재활성화에 필요한 instance를 저장할 수 있다. **PECS**와 **LWF**는 단순 윈도우 기반인 **TWF**보다 더 성능이 좋고 **PECS**가 지금까지 가장 성능이 좋다.  
+Concept drift를 다루기위한 첫 instance-based learning 방법은 **IB3**이다. IB3는 정확히 분류된 것이 얼마나 있는지 확인하고 해당 클래스의 빈도수를 비교하여 noise가 있거나 오래된 케이스는 버리면서 케이스를 유지한다. IB3는 점진적인(gradual) concept drift에 대해서만 사용될 수 있고 적용이 상대적으로 느리다는 점에서 비판을 받았다. Salganicoff의 **Local Weighted Forgetting (LWF)**는 오래된 instance는 비활성화하지만 이것도 단지 유사한 새 instance가 나타났을때만 해당한다. **Prediction Error Context Switching (PECS)**는 **LWF**와 비슷하지만 instance에 대한 정확도를 고려한다. 그리고 추가적으로 재활성화에 필요한 instance를 저장할 수 있다. PECS와 LWF는 단순 윈도우 기반인 TWF보다 더 성능이 좋고 PECS가 지금까지 가장 성능이 좋다.  
 
 # Datasets for testing systems handling concept drift
 
