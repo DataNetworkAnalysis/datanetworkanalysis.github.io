@@ -10,7 +10,7 @@ tags: Machine Learning
 
 # Definitions and peculiarities of the problem
 
-real world를 학습하기 어려운 이유는 바로 the concept of interest가 예측하기위해 사용된 변수가 아닌 어떤 `hidden context` 에 따라 달라질 수 있기 때문이다. 대표적으로는 날씨에 대한 예측이나 고객들의 선호도를 예로 들 수 있다. 
+Real world를 학습하기 어려운 이유는 바로 the concept of interest가 예측하기위해 사용된 변수가 아닌 어떤 `hidden context` 에 따라 달라질 수 있기 때문이다. 대표적으로는 날씨에 대한 예측이나 고객들의 선호도를 예로 들 수 있다. 
 
 concept drift의 또다른 문제는 noise와 착각하기 쉽다는 점이다. 때문에 noise와 concept drift 모두 잘 잘을 수 있도록 학습해야한다.
 
@@ -24,7 +24,7 @@ concept drift를 다루기위한 이상적인 방법은 크게 3가지가 있다
 
 # Types of concept drift
 
-일반적으로 concept drift는 크게 두가지 종류가 있다. 갑자기 생기거나 어느새 생기거나. 예를 들면 대학을 졸업하고 갑자기 금전적인 걱정이 생기게 되거나, 공장의 장비가 서서히 마모되어 품질에 영향이 생기는 경우이다. 
+일반적으로 concept drift는 크게 두 가지 종류가 있다. 갑자기 생기거나 어느새 생기거나. 예를 들면 대학을 졸업하고 갑자기 금전적인 걱정이 생기게 되거나, 공장의 장비가 서서히 마모되어 품질에 영향이 생기는 경우이다. 
 
 어떤 context의 hidden change는 목표변수의 변화 때문일수도 있지만 데이터의 분포가 바뀌어서 일수도있다. 목표변수가 변하지 않더라도 데이터의 분포가 변하면 모델도 더이상 사용할 수가 없다. 이러한 분포 변화에 따른 모델 수정의 필요성을 `virtual concept drift` 라고 한다. Virtual concept drift와 real concept drift는 종종 함께 발생한다. 그러나 결론적으로 이 두 가지를 구분하는것은 사실 그렇게 중요하지 않다. 중요한 것은 concept drift가 발생했다면 모델은 수정되어야 한다는 것이다.
 
