@@ -3,7 +3,7 @@ layout: post
 title:  "The problem of concept drift: Deﬁnitions and related work Korean Version (한국어버전)"
 date:   2019-12-05 1:37:00 +0800
 categories: Paper
-tags: Machine Learning
+tags: MachineLearning
 ---
 
 본 논문은 2004년에 발표되었으며, 'concept drift'의 정의와 관련연구들에 대한 비평을 하는 논문이다. 원문은 [여기](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.58.9085&rep=rep1&type=pdf)서 확인할 수 있다.
