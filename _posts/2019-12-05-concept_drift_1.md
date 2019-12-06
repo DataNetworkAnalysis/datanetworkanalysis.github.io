@@ -8,6 +8,11 @@ tags: MachineLearning
 
 본 논문은 2004년에 발표되었으며, 'concept drift'의 정의와 관련연구들에 대한 비평을 하는 논문이다. 원문은 [여기](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.58.9085&rep=rep1&type=pdf)서 확인할 수 있다.
 
+**Authors**: Alexey, Tsymbal    
+**Conference**: Computer Science Department Trinity College Dublin  
+**Paper**: [The problem of concept drift: Deﬁnitions and related work](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.58.9085&rep=rep1&type=pdf)  
+**Year**: 2004   
+
 # Definitions and peculiarities of the problem
 
 Real world를 학습하기 어려운 이유는 바로 the concept of interest가 예측하기위해 사용된 변수가 아닌 어떤 `hidden context` 에 따라 달라질 수 있기 때문이다. 대표적으로는 날씨에 대한 예측이나 고객들의 선호도를 예로 들 수 있다. 

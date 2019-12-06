@@ -6,12 +6,12 @@ categories: Paper
 tags: XAI
 ---
 
-**Authors**: Daniel Smilkov, Nikhil Thorat, Been Kim, Fernanda Viégas, Martin Wattenberg
-**Conference**: CVPR
-**Link**: [SmoothGrad: removing noise by adding noise](https://arxiv.org/abs/1706.03825)
-**Year**: 2017
-
 이번에 리뷰할 논문은 2017년 CVPR에 등록된 논문입니다.  Google AI 팀에서 연구하였으며 Interpretable AI를 위해 이미지 분류에서 새로운 방법은 제안합니다.
+
+**Authors**: Daniel Smilkov, Nikhil Thorat, Been Kim, Fernanda Viégas, Martin Wattenberg  
+**Conference**: CVPR  
+**Paper**: [SmoothGrad: removing noise by adding noise](https://arxiv.org/abs/1706.03825)  
+**Year**: 2017  
 
 # 역자의 말
 
