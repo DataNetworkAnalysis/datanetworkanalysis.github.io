@@ -45,7 +45,7 @@ Sigmoid는 왜 사용하게된 걸까? 힌튼도 얘기했었다. 시그모이�
 이후에 딥러닝의 시대를 열어준 큰 역할을 한것이 바로 ReLU(Rectified Linear Unit)이다. 하지만 ReLU는 큰 단점이 있다. 바로 gradient가 0이 되는 부분이 있다는 것이다. Sigmoid는 banishing gradient 문제가 있지만 ReLU는 dead ReLU 문제가있다. 그러나 잘된다. 이게 왜 잘되는지 또한 설명할 수 있는 사람이 없다.
 
 <p align="center">
-    <img src='http://img.thothchildren.com/ec6ef79b-788a-4e69-bffc-8fca03b38ed9.png' width=300/>
+    <img src='http://img.thothchildren.com/ec6ef79b-788a-4e69-bffc-8fca03b38ed9.png' width='300'/>
 </p>
 
 ## Number of Layers
@@ -55,7 +55,7 @@ Layer의 개수 또한 정해져있는게 아니다. 대부분 실험적으로 �
 [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf)
 
 <p align="center">
-    <img src='https://drive.google.com/uc?export=view&id=1L5hsUBAnt8P9fcKiJuzEzhnmglKn1kKN' width=400/>
+    <img src='https://drive.google.com/uc?export=view&id=1L5hsUBAnt8P9fcKiJuzEzhnmglKn1kKN' width='400'/>
 </p>
 
 ## Batch Normalization
@@ -71,7 +71,7 @@ Batch size는 몇이 가장 좋을까요? 정해진게 있을까? 이 실험을 
 [Measuring the Effects of Data Parallelism on Neural Network Training](https://arxiv.org/pdf/1811.03600.pdf)
 
 <p align="center">
-    <img src='https://drive.google.com/uc?export=view&id=1Nj42fByYoiTTir0N_3_XReIBAyo9FS1V' width=500/>
+    <img src='https://drive.google.com/uc?export=view&id=1Nj42fByYoiTTir0N_3_XReIBAyo9FS1V' width='500'/>
 </p>
 
 ## Generalization
@@ -83,13 +83,13 @@ Batch size는 몇이 가장 좋을까요? 정해진게 있을까? 이 실험을 
 실제로는 아래 그림과 같이 어느정도 지점이 지나면 다시 test set에 대한 성능이 좋아질 수 있다는 것이다. 
 
 <p align="center">
-    <img src='https://drive.google.com/uc?export=view&id=1B_wedqIJz9t5-cawpbcTq3WTCbmL3esk' width=700/>
+    <img src='https://drive.google.com/uc?export=view&id=1B_wedqIJz9t5-cawpbcTq3WTCbmL3esk' width='700'/>
 </p>
 
 실제 논문에서 실험한 결과는 아래 그림을 보면 알 수 있다. 노란색에 가까울수록 error rate가 높아지는 것이다. y축을 기준으로보면 epoch에 따라 변하는 과정을 볼 수 있고 x축을 기준으로보면 parameter 수에 따라 변하는 것을 볼 수 있다. 두 가지 모두 test 데이터를 확인했을때 과적합이 되는 것 같았다가 다시 error rate가 낮아지는 부분을 확인할 수 있다. (중간에 노란띠가 생기는 것) 그러나 역시 이마저도 왜그런지에 대한 설명은 부족하다.
 
 <p align="center">
-    <img src='https://drive.google.com/uc?export=view&id=10fadnlgOYhurGn6QHqLPCH0fEAiI06Bs' width=700/>
+    <img src='https://drive.google.com/uc?export=view&id=10fadnlgOYhurGn6QHqLPCH0fEAiI06Bs' width='700'/>
 </p>
 
 ## Convolution
@@ -97,7 +97,7 @@ Batch size는 몇이 가장 좋을까요? 정해진게 있을까? 이 실험을 
 [Exploring Randomly Wired Neural Networks for Image Recognition](https://arxiv.org/pdf/1904.01569.pdf)에서는 random하게 node를 구성해도 결과가 잘 나오는 것에 대해서 실험을 했다. 결과적으로 큰 차이가 없음을 확인했다. 그러나 왜 잘나오는지에 대해서도 알 방법이 없다.
 
 <p align="center">
-    <img src='https://drive.google.com/uc?export=view&id=1y0xmIKZVydzH-Yrac9jeZ7ZOVuwNegCa' width=400/>
+    <img src='https://drive.google.com/uc?export=view&id=1y0xmIKZVydzH-Yrac9jeZ7ZOVuwNegCa' width='400'/>
 </p>
 
 딥러닝에 대한 설명은 아직까지도 '잘되는데 왜그런지는 알 수 없어요' 이다. 심지어 GAN을 처음으로 발표한 우리들의 좋은 친구 이안 굿펠로우조차 본인도 GAN이 왜 잘되는지는 모른다고한다. 
