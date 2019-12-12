@@ -6,9 +6,9 @@ categories: Paper
 tags: Review XAI
 ---
 
-# 시작말
-
 비교적 최근에 나온 몇몇 논문들을 통해 딥러닝 모델을 눈으로 살펴볼 수 있는 방법(Methods)과 평가지표(Evaluations)에 대한 설명을 작성하였습니다.
+
+# 시작말
 
 본 글에 앞서 이 글은 이번 모두의 연구소에서 주최하는 AI College의 Explainable AI 분야에 참가하고자 1번문제에 대한 답변을 포스팅으로 작성한 글 입니다.
 
