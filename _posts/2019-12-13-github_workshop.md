@@ -45,6 +45,6 @@ tags: Github
 
 **청자는 어떤 것을 준비해야 하는지, 참고 자료로 무엇이 있는지**
 
-[지옥에서 온 Git (새 수업으로 대체) - 생활코딩](https://opentutorials.org/course/2708)
-
 ---
+
+[지옥에서 온 Git (새 수업으로 대체) - 생활코딩](https://opentutorials.org/course/2708)
