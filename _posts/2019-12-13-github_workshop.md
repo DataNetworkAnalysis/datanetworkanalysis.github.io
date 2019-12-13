@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  "지옥에서 돌아올뻔한 Github 가이드"
-date:   2019-12-12 22:59:00 +0800
+date:   2019-12-13 1:13:00 +0800
 categories: Workshop
 tags: Github 
 ---
 
-**발표자**: Touch Too, SANGMAN PARK
+**발표자**: Touch Too, SANGMAN PARK  
 **작성멤버**: Touch Too, gayoun koh, SANGMAN PARK
 
 # 교육 계획
