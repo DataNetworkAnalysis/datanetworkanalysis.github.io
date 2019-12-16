@@ -79,13 +79,18 @@ GPU 사용을 위해서는 CUDA 설치가 필수입니다.
 
 자 이제 끝
 
-이 아닙니다. Visual Studio가 설치되어 있는지 확인해 보세요. 만약 설치가 안되어있다면 [Visual Studio Download](https://visualstudio.microsoft.com/ko/downloads/?rr=https%3A%2F%2Fwww.google.com%2F) 에서 Community 설치 후 `C++빌드 도구`를 설치 해야합니다. **오른쪽 옵션 3개**로 체크해주세요
+이 아닙니다. Visual Studio가 설치되어 있는지 확인해 보세요. 만약 설치가 안되어있다면 [Visual Studio Download](https://visualstudio.microsoft.com/ko/downloads/?rr=https%3A%2F%2Fwww.google.com%2F) 에서 Community 설치 후 `C++빌드 도구`를 설치 해야합니다. Visual C++ 빌드 도구를 클릭한 후 **오른쪽 옵션 3개**로 체크해주세요
+
+- Windows 10 SDK(10.0.17763.0)
+- CMake용 Visual C++ 도구
+- 테스트 도구 핵심 기능 - 빌드 도구
 
 <p align="center">
-    <img src='http://drive.google.com/uc?export=view&id=1ES-dE1Xnb0mlYLlb4lpXbW8ZsPQbUdOv' /><br>
+    <img src='http://drive.google.com/uc?export=view&id=1ES-dE1Xnb0mlYLlb4lpXbW8ZsPQbUdOv' width='800'/><br>
+    <i>화질구지 죄송합니다.</i>
 </p>
 
-화질구지 죄송합니다.
+
 
 # Installation
 
