@@ -6,7 +6,7 @@ categories: Workshop
 tags: MachineLearning DeepLearning
 ---
 
-**발표자**: Touch Too
+**발표자**: Touch Too  
 **작성멤버**: Touch Too
 
 # 교육 계획
