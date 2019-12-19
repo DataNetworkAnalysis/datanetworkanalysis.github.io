@@ -49,7 +49,7 @@ tags: Mentoring
 이공계 학생들이라 그런지 앞에서 17학번 누나들이 얘기하다가 갑자기 웬 아저씨가 나와서 발표하니 반응이 영 시원치않았다. 그래도 분야에서 할 수 있는 일들이 워낙 다양하게 있는지라 흥미는 있어보였고 생각보다 학생들의 집중도도 좋았다. 점심시간이 가까워져서 다들 배가 많이 고팠는지 얼른 밥먹으러 가고싶은 눈치였다. 
 
 <p align="center">
-    <img src='https://drive.google.com/open?id=19ItWPxdAwqLLljMyeiKrIe2h4XWoRSr5'/><br>
+    <img src='https://drive.google.com/uc?export=view&id=19ItWPxdAwqLLljMyeiKrIe2h4XWoRSr5'/><br>
     <i>깨알같은 DNA 홍보 ㅎㅎ</i>
 </p>
 
