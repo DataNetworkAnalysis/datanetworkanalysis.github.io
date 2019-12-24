@@ -35,7 +35,7 @@ Interpretable Machine Learning의 내용을 기반으로 번역하여 정리해�
 
 모든 아파트의 평균 예측가는 310,000 유로이다. 그렇다면 평균가와 비교하여 각 특성들이 얼마나 예측값에 기여를 한것일까?
 
-선형모델을 사용하면 쉽게 알 수 있다. 선형모델에서 각 특성의 영향력은 각 특성값과 그에대한 가중지(선형회귀의 경우 coefficient를 말함)을 곱한 값이다. 선형모델은 인과성을 가지고 있기때문에 이렇게 단순히 가중치를 통해서 영향력을 바로 확인할 수 있다. 그러나 조금 더 복잡한 모델의 경우 (비선형적인 모델들) 다른 방법이 필요하다. 예를 들어 LIME의 경우는 영향력을 확인하기위해 지역적으로 선형모델을 적용하는 방법을 제안한다. 또다른 방법은 바로 게임이론을 적용하는 것이다. 1953년에 Shapley가 쓴 논문에서 처음 Shapley value라는 단어가 언급되었다 [2]. 이 방법은 총 지불금(payout)에 각 선수들(players)의 기여도에 따라 선수의 지불금을 정의하는 것이다. 
+선형모델을 사용하면 쉽게 알 수 있다. 선형모델에서 각 특성의 영향력은 각 특성값과 그에대한 가중지(선형회귀의 경우 coefficient를 말함)을 곱한 값이다. 선형모델은 인과성을 가지고 있기때문에 이렇게 단순히 가중치를 통해서 영향력을 바로 확인할 수 있다. 그러나 조금 더 복잡한 모델의 경우 (비선형적인 모델들) 다른 방법이 필요하다. 예를 들어 LIME의 경우는 영향력을 확인하기위해 지역적으로 선형모델을 적용하는 방법을 제안한다. 또다른 방법은 바로 게임이론을 적용하는 것이다. 1953년에 Shapley가 쓴 논문에서 처음 Shapley value라는 단어가 언급되었다 [^2]. 이 방법은 총 지불금(payout)에 각 선수들(players)의 기여도에 따라 선수의 지불금을 정의하는 것이다. 
 
 지불금? 선수들? 게임? 머신러닝과 어떤 관계인가? 여기서 "게임"은 하나의 인스턴스(관측치)에 대한 예측을 말한다. "이득(gain)"은 모든 데이터로부터 얻은 평균예측값에서 하나의 관측치로부터 얻은 예측값을 뺀 값이다. "선수들"는 예측값을 얻는데 사용한 각 특성들을 말한다. 아파트 예측에 대한 얘기를 계속해보자면 `park-nearby`, `cat-banne`, `area-50` and `floor-2nd` 는 모두 300,000 유로라는 예측에 사용된 특성들이다. 우리가 알고싶은 것은 평균가 310,000 유로와 예측값 300,000 유료의 차이인 -10,000 유로에 대한 것이다. 
 
@@ -194,7 +194,7 @@ $$\phi_j+\phi_j^{+}$$
 
 ## 4.3. Estimating the Shapley Value
 
-특성값의 모든 가능한 연합은 정확한 Shapley value를 계산하기위해서 j번째 특성이 있는 것과 없는 것 모두 평가되어야만 한다. 특성 수가 커짐에 따라 가능한 연합의 수가 기하급수적으로 늘어나기때문에 Shapley value를 계산하는 정확한 방법이 오히려 문제가 될 수 있다. Strumbelj et al. (2014)는 몬테카를로 샘플링(Monte-Carlo sampling)으로 추정치를 구하는 방법을 제안한다 [3].
+특성값의 모든 가능한 연합은 정확한 Shapley value를 계산하기위해서 j번째 특성이 있는 것과 없는 것 모두 평가되어야만 한다. 특성 수가 커짐에 따라 가능한 연합의 수가 기하급수적으로 늘어나기때문에 Shapley value를 계산하는 정확한 방법이 오히려 문제가 될 수 있다. Strumbelj et al. (2014)는 몬테카를로 샘플링(Monte-Carlo sampling)으로 추정치를 구하는 방법을 제안한다 [^3].
 
 $$\hat{\phi}_{j}=\frac{1}{M}\sum_{m=1}^M\left(\hat{f}(x^{m}_{+j})-\hat{f}(x^{m}_{-j})\right)$$
 
@@ -243,7 +243,7 @@ Shapley value는 연산량이 너무 많다. 현실의 문제들 중 99.9%에서
 
 Shapley value는 잘못 해석될 수 있다. 앞서 말한 주의사항처럼 단순히 기여도를 알고싶은 특성을 모델에서 제외했을때 생기는 차이로 Shapley value라고 생각될 수 있다. 그러나 다시 말하자면 Shapley value는 로 다른 특성들의 조합으로 얻은 예측값에 대한 해당 특성(기여도를 알고싶은 특성)의 기여도를 평균하여 계산한 값이다. 
 
-sparse한 설명성(적은 수의 특성에 대한 설명)을 원한다면 Shapley value를 사용하는 것은 잘못된 방법이다. Shapley value 방법으로 계산된 설명은 항상 모든 특성을 사용한다. 사람들은 LIME과 같이 선택적인 설명을 선호한다. 비전문가가 사용하기에는 LIME이 더 적절한 설명 방법일 수 있다. 또는 2016년에 나온 SHAP을 사용하는것도 좋은 방법이다 [4]. SHAP은 Shapley value를 기반으로 하는 방법이고 적은 수의 특성으로도 설명성을 나타낼 수 있다.
+sparse한 설명성(적은 수의 특성에 대한 설명)을 원한다면 Shapley value를 사용하는 것은 잘못된 방법이다. Shapley value 방법으로 계산된 설명은 항상 모든 특성을 사용한다. 사람들은 LIME과 같이 선택적인 설명을 선호한다. 비전문가가 사용하기에는 LIME이 더 적절한 설명 방법일 수 있다. 또는 2016년에 나온 SHAP을 사용하는것도 좋은 방법이다 [^4]. SHAP은 Shapley value를 기반으로 하는 방법이고 적은 수의 특성으로도 설명성을 나타낼 수 있다.
 
 Shapley value는 LIME과 다르게 설명가능한 모델이 아닌 단순히 특성별 기여도를 나타내는 값이다. 즉 입력값의 변화에 따른 예측값의 변화를 설명하기 힘들다. 예를 들면 "내가 1년에 300 유로를 더 번다면 내 신용점수는 5 포인트만큼 오를거야"와 같은 설명이 불가능하다.
 
@@ -257,16 +257,16 @@ Shapley value는 R 패키지인 `iml`에 구현되어있다.
 
 Shapley value에 대해 대안으로 나온 추정 방법인 SHAP은 다음 챕터에서 소개한다. 
 
-또다른 패키지는 `breakDown`이다 [5]. BreakDown은 예측치에 대한 각 특성의 기여도를 나타내고, step by step으로 계산한다. 다시 게임에 비유하자면 아무도 없는 팀에서 예측에 가장 큰 기여를 한 특성값을 하나씩 추가해가며 모든 특성이 추가될때까지 반복한다. 각 특성이 얼마나 기여를 했는지는 이미 팀에 있는 특성에 따라 결정되는데 이게 breakDown의 가장 큰 단점이다. Shalpey value 방법보다는 빠르고 교호작용이 없는 모델에 대해서만 결과가 똑같이 나온다.
+또다른 패키지는 `breakDown`이다 [^5]. BreakDown은 예측치에 대한 각 특성의 기여도를 나타내고, step by step으로 계산한다. 다시 게임에 비유하자면 아무도 없는 팀에서 예측에 가장 큰 기여를 한 특성값을 하나씩 추가해가며 모든 특성이 추가될때까지 반복한다. 각 특성이 얼마나 기여를 했는지는 이미 팀에 있는 특성에 따라 결정되는데 이게 breakDown의 가장 큰 단점이다. Shalpey value 방법보다는 빠르고 교호작용이 없는 모델에 대해서만 결과가 똑같이 나온다.
 
 # 8. Reference
 
-[^1] [A value for n-person games.” Contributions to the Theory of Games](https://medium.com/tokeonomy/%EA%B2%8C%EC%9E%84%EC%9D%B4%EB%A1%A0-%EB%B2%A0%EC%9D%B4%EC%A7%81-game-theory-basic-398bbfd4f87b)
+[^1]: [A value for n-person games.” Contributions to the Theory of Games](https://medium.com/tokeonomy/%EA%B2%8C%EC%9E%84%EC%9D%B4%EB%A1%A0-%EB%B2%A0%EC%9D%B4%EC%A7%81-game-theory-basic-398bbfd4f87b)
 
-[2] Shapley, Lloyd S. “A value for n-person games.” Contributions to the Theory of Games 2.28 (1953): 307-317.
+[^2]: Shapley, Lloyd S. “A value for n-person games.” Contributions to the Theory of Games 2.28 (1953): 307-317.
 
-[3] Štrumbelj, Erik, and Igor Kononenko. “Explaining prediction models and individual predictions with feature contributions.” Knowledge and information systems 41.3 (2014): 647-665.
+[^3]: Štrumbelj, Erik, and Igor Kononenko. “Explaining prediction models and individual predictions with feature contributions.” Knowledge and information systems 41.3 (2014): 647-665.
 
-[4] Lundberg, Scott M., and Su-In Lee. “A unified approach to interpreting model predictions.” Advances in Neural Information Processing Systems. 2017.
+[^4]: Lundberg, Scott M., and Su-In Lee. “A unified approach to interpreting model predictions.” Advances in Neural Information Processing Systems. 2017.
 
-[5] Staniak, Mateusz, and Przemyslaw Biecek. “Explanations of model predictions with live and breakDown packages.” arXiv preprint arXiv:1804.01955 (2018).
+[^5]: Staniak, Mateusz, and Przemyslaw Biecek. “Explanations of model predictions with live and breakDown packages.” arXiv preprint arXiv:1804.01955 (2018).
