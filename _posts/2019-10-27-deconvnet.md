@@ -4,6 +4,7 @@ title:  "Visualizing and Understanding Convolutional Networks Korean Version(한
 date:   2019-10-27 21:09:00 +0800
 categories: Paper
 tags: XAI
+images: images/default.jpg
 ---
 
 본 논문은 2013년에 쓰여졌으며 당시 ImageNet 2012에서 Krizhevsky가 CNN을 이용한 AlexNet이라는 모델로 엄청난 성능을 낸 것을 보고 **어떻게 그런 성능을 낼 수 있었는지(Why they perform so well)**와 **어떻게 개선할 수 있을지(how they might be improved)**를 연구한 논문이다.

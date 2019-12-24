@@ -4,6 +4,7 @@ title:  "How to Explain AI (AI를 설명하는 방법)"
 date:   2019-09-11 3:17:00 +0800
 categories: Paper
 tags: Review XAI
+images: images/default.jpg
 ---
 
 비교적 최근에 나온 몇몇 논문들을 통해 딥러닝 모델을 눈으로 살펴볼 수 있는 방법(Methods)과 평가지표(Evaluations)에 대한 설명을 작성하였습니다.

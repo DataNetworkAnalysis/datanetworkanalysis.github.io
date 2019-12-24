@@ -4,6 +4,7 @@ title:  "2019 성남시 오픈 이노베이션 챌린지 후기"
 date:   2019-12-17 15:49:00 +0800
 categories: Contest
 tags: Innovation
+images: images/inno.jpg
 ---
 
 이번 성남시에서 개최한 이노베이션 챌린지에서 DNA 팀원 원가연님께서 수상하셨습니다. 본 내용은 원가연님께서 대회 참가 후기 내용을 작성해주셨습니다.
