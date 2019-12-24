@@ -132,7 +132,7 @@ $$\phi_j(val) = \sum_{S\subseteq\{x_1,\dotsc,x_p\}\setminus\{x_j\}}\frac{|S|!(p-
 
 여기서 S는 모델에 사용된 특성들의 부분집합, x는 설명을 위한 관측치의 특성값 벡터 그리고 p는 특성의 수이다. val_x(S)는 집합 S에 포함되지 않은 특성을 모두 한계화(marginalized)한 집합 S의 특성값들에 대한 예측치이다. 
 
-$$val_{x}(S)=\int\hat{f}(x_{1},\ldots,x_{p})d\mathbb{P}_{x\notin{}S}-E_X(\hat{f}(X))$$
+$$val_{x}(S)=\int\hat{f}(x_{1},\dotsc,x_{p})d\mathbb{P}_{x\notin{}S}-E_X(\hat{f}(X))$$
 
 예를 들자면 특성 x1, x2, x3 그리고 x4를 학습한 기계학습 모델이 있고 특성 x1과 x3를 포함하는 연합(the coalition) S에 대한 예측치를 평가한다고 하자.
 
@@ -158,7 +158,7 @@ $$val(S\cup\{x_j\})=val(S\cup\{x_k\})$$
 
 모든 경우에 대해 아래와 같은 가정하에서 
 
-$$S\subseteq\{x_{1},\ldots,x_{p}\}\setminus\{x_j,x_k\}$$
+$$S\subseteq\{x_{1},\dotsc,x_{p}\}\setminus\{x_j,x_k\}$$
 
 기여도가 같아야 한다.
 
@@ -172,7 +172,7 @@ $$val(S\cup\{x_j\})=val(S)$$
 
 모든 경우에 대해 아래와 같은 가정하에서
 
-$$S\subseteq\{x_{1},\ldots,x_{p}\}$$
+$$S\subseteq\{x_{1},\dotsc,x_{p}\}$$
 
 기여도는 0이어야 한다.
 
@@ -205,11 +205,11 @@ $$\hat{\phi}_{j}=\frac{1}{M}\sum_{m=1}^M\left(\hat{f}(x^{m}_{+j})-\hat{f}(x^{m}_
 - For all m = 1,…,M:
     - Draw random instance z from the data matrix X
     - Choose a random permutation o of the feature values
-    - Order instance x: $$x_o=(x_{(1)},\ldots,x_{(j)},\ldots,x_{(p)})$$
-    - Order instance z: $$z_o=(z_{(1)},\ldots,z_{(j)},\ldots,z_{(p)})$$ test
+    - Order instance x: $$x_o=(x_{(1)},\dotsc,x_{(j)},\dotsc,x_{(p)})$$
+    - Order instance z: $$z_o=(z_{(1)},\dotsc,z_{(j)},\dotsc,z_{(p)})$$ test
     - Construct two new instances
-        - With feature j: $$x_{+j}=(x_{(1)},\ldots,x_{(j-1)},x_{(j)},z_{(j+1)},\ldots,z_{(p)})$$ 
-        - Without feature j: $$x_{-j}=(x_{(1)},\ldots,x_{(j-1)},z_{(j)},z_{(j+1)},\ldots,z_{(p)})$$ 
+        - With feature j: $$x_{+j}=(x_{(1)},\dotsc,x_{(j-1)},x_{(j)},z_{(j+1)},\dotsc,z_{(p)})$$ 
+        - Without feature j: $$x_{-j}=(x_{(1)},\dotsc,x_{(j-1)},z_{(j)},z_{(j+1)},\dotsc,z_{(p)})$$ 
     - Compute marginal contribution: $$\phi_j^{m}=\hat{f}(x_{+j})-\hat{f}(x_{-j})$$ 
 - Compute Shapley value as the average: $$\phi_j(x)=\frac{1}{M}\sum_{m=1}^M\phi_j^{m}$$
 
