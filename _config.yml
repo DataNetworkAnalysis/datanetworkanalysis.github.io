@@ -32,7 +32,7 @@ google_site_verification: "UA-153506145-1"
 disqus_shortname: "DNAteam"
 
 # Build settings
-markdown: maruku # kramdown 
+markdown: kramdown 
 gems:
   - jekyll-feed
   - jekyll-paginate
