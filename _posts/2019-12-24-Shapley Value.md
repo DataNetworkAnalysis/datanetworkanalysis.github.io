@@ -6,8 +6,6 @@ categories: Interpretable-Machine-Learning
 tags: XAI
 ---
 
-[1. 게임이론 (Game Thoery)](#1-게임이론-game-thoery)
-
 # 1. 게임이론 (Game Thoery)
 
 Shapley Value에 대해 알기위해서는 **게임이론**에 대해 먼저 이해해야한다. 게임이론이란 우리가 아는 게임을 말하는 것이 아닌 **여러 주제가 서로 영향을 미치는 상황에서 서로가 어떤 의사결정이나 행동을 하는지에 대해 이론화한 것**을 말한다. 즉, 아래 그림과 같은 상황을 말한다. [^1]
