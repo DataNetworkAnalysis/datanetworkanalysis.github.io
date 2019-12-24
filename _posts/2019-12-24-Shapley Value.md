@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "SHAP에 대한 모든 것 - part 1 : Shapley Values 알아보기 (temp)"
+title:  "SHAP에 대한 모든 것 - part 1 : Shapley Values 알아보기"
 date:   2019-12-24 05:09:00 +0800
 categories: Interpretable-Machine-Learning
 tags: XAI
 ---
 
-# 게임이론 (Game Thoery)
+# 1. 게임이론 (Game Thoery)
 
 Shapley Value에 대해 알기위해서는 **게임이론**에 대해 먼저 이해해야한다. 게임이론이란 우리가 아는 게임을 말하는 것이 아닌 **여러 주제가 서로 영향을 미치는 상황에서 서로가 어떤 의사결정이나 행동을 하는지에 대해 이론화한 것**을 말한다. 즉, 아래 그림과 같은 상황을 말한다. [1]
 
@@ -20,7 +20,7 @@ Shapley Value에 대해 알기위해서는 **게임이론**에 대해 먼저 이
     <img src='https://drive.google.com/uc?id=1xEWp30p4RplhsKCQqJCvyAASHQoX7rHM'/>
 </p>
 
-# Shapley value
+# 2. Shapley value
 
 게임이론을 바탕으로 하나의 특성 대한 중요도를 알기위해 여러 특성들의 조합을 구성하고 해당 특성의 유무에 따른 평균적인 변화를 통해 얻어낸 값이 바로 shapley value이다. 
 
@@ -70,9 +70,9 @@ Shapley value는 모든 가능한 조합에 대해서 하나의 특성의 기여
     <i>모든 특성값을 고려해서 Shapley value를 얻기위해서는 먼저 각 특성값에 대해 평균값으로부터 예측값의 차이를 나타내는 분포를 얻어야한다. </i>
 </p>
 
-# Examples and Interpretation
+# 3. Examples and Interpretation
 
-특성값 $j$ 에 대한 Shapley value의 해석 : $j$ 번째 특성값은 데이터셋에 대한 평균 예측값과 비교하여 특정 관측치를 예측하는데 $\phi_j$ 만큼의 기여도를 가진다.
+특성값 $$j$$ 에 대한 Shapley value의 해석 : $$j$$ 번째 특성값은 데이터셋에 대한 평균 예측값과 비교하여 특정 관측치를 예측하는데 $$\phi_j$$ 만큼의 기여도를 가진다.
 
 Shapley value는 분류(classification) 문제와 회귀(regression) 문제 모두 적용가능하다.
 
@@ -92,7 +92,7 @@ Shapley value는 분류(classification) 문제와 회귀(regression) 문제 모�
 
 Shapley value를 해석할 때 주의할 점이 있다. Shapley value는 서로 다른 특성들의 조합으로 얻은 예측값에 대한 해당 특성(기여도를 알고싶은 특성)의 기여도를 평균하여 계산한 값이다. 단순히 학습된 모델로부터 특성을 제외했을때 나타난 예측값의 차이를 말하는 것이 아니다.
 
-# The Shapley Value in Detail
+# 4. The Shapley Value in Detail
 
 이 부분에서는 궁금해하는 독자들을 위해 Shapley value의 연산과정과 정의에 대해서 더 깊게 설명하도록 한다. 만약 기술적인 부분에 흥미가 없다면 바로 "장점과 단점"으로 건너뛰면 된다.
 
@@ -100,13 +100,13 @@ Shapley value를 해석할 때 주의할 점이 있다. Shapley value는 서로 
 
 $$\hat{f}(x) = \beta_{0} + \beta_{1}x_{1} + \dotsc + \beta_{p}x_{p}$$
 
-여기서 $x$가 기여도를 계산하기 원하는 특정 관측치이다. 각 $x_{j}$는 특성값이다. $j = 1, \dotsc ,p$ 일 때, $\beta_j$ 는 특성 $j$에 대한 가중치이다.
+여기서 $$x$$가 기여도를 계산하기 원하는 특정 관측치이다. 각 $$x_{j}$$는 특성값이다. $$j = 1, \dotsc ,p$$ 일 때, $$\beta_j$$ 는 특성 $$j$$에 대한 가중치이다.
 
-예측값 $\hat{f}(x)$에서 $j$ 번째 특성의 기여도 $\phi_j$ : 
+예측값 $$\hat{f}(x)$$에서 $$j$$ 번째 특성의 기여도 $$\phi_j$$ : 
 
 $$\phi_j(\hat{f})=\beta_jx_j-E(\beta_jX_j)=\beta_jx_j-\beta_jE(X_j)$$
 
-여기서 $E(\beta_jX_j)$는 특성 $j$에 대해 평균 추정 효과이다. 기여도는 평균 효과와 각 특성 효과의 차이이다. 오우! 그렇다면 이제 각 특성이 예측값에 얼마나 기여했는지 알 수 있다. 하나의 관측치에 대한 모든 특성의 기여도를 계산한다면 아래와 같이 나타낼 수 있다.
+여기서 $$E(\beta_jX_j)$$는 특성 $$j$$에 대해 평균 추정 효과이다. 기여도는 평균 효과와 각 특성 효과의 차이이다. 오우! 그렇다면 이제 각 특성이 예측값에 얼마나 기여했는지 알 수 있다. 하나의 관측치에 대한 모든 특성의 기여도를 계산한다면 아래와 같이 나타낼 수 있다.
 
 $$
 \begin{aligned}
@@ -116,13 +116,13 @@ $$
 \end{aligned}                              
 $$
 
-이 결과값은 특정 데이터 $x$에서 평균 예측값을 뺀 값이다. 특성 기여도는 음수도 나올 수 있다.
+이 결과값은 특정 데이터 $$x$$에서 평균 예측값을 뺀 값이다. 특성 기여도는 음수도 나올 수 있다.
 
 이러한 과정을 선형 모델뿐만 아니라 다른 모델에도 똑같이 적용할 수 있을까? 이 과정을 model-agnostic으로 활용할 수 있는지 알아보자. 보통은 모델의 유형에 따라 비슷한 가중치를 갖지 않기 때문에 다른 방법이 필요하다. 
 
 예상치 못한 도움 : 협동 게임 이론 (cooperative game theory). Shapley value는 어떤 기계학습 모델이든지 단일 예측치로부터 특성의 기여도를 계산하기위한 방법이다. 
 
-## The Shapley Value
+## 4.1. The Shapley Value
 
 Shapley value는 집합 S에 대한 선수(players)의 값 함수의 값(a value function val)으로 정의된다.
 
@@ -152,7 +152,7 @@ $$\sum\nolimits_{j=1}^p\phi_j=\hat{f}(x)-E_X(\hat{f}(X))$$
 
 **Symmetry**
 
-두 개의 특성값 j 와 k의 기여도는 모두 같은 가능한 연합에 기여했다면 값이 같아야 한다.
+두 개의 특성값 $$j$$ 와 $$k$$의 기여도는 모두 같은 가능한 연합에 기여했다면 값이 같아야 한다.
 
 $$val(S\cup\{x_j\})=val(S\cup\{x_k\})$$
 
@@ -166,7 +166,7 @@ $$\phi_j=\phi_{k}$$
 
 **Dummy**
 
-예측값에 영향이 없는 특성 j 는 (어떤 특성값의 연합에 추가되거나 안되거나) Shapley value는 0이어야 한다.
+예측값에 영향이 없는 특성 $$j$$ 는 (어떤 특성값의 연합에 추가되거나 안되거나) Shapley value는 0이어야 한다.
 
 $$val(S\cup\{x_j\})=val(S)$$
 
@@ -180,23 +180,23 @@ $$\phi_j=0$$
 
 **Additive**
 
-결합된 지불금인 val+val^+이 있는 게임에서 각가의 Shapley value는 아래 수식을 따른다.
+결합된 지불금인 $$val+val^+$$이 있는 게임에서 각가의 Shapley value는 아래 수식을 따른다.
 
 $$\phi_j+\phi_j^{+}$$
 
 많은 의사결정나무를 평균내어 예측을 하는 Random forest를 학습했다고 가정해보자. Additivity 속성은 각 특성값에 대해서 Shapley value를 각 트리별로 개별적으로 계산할 수 있고 평균내어 random forest에서 특성값들에 대해 Shapley value를 구할 수 있다는 것을 말한다.
 
-## Intuition
+## 4.2. Intuition
 
 직관적으로 Shapley value를 이해할 수 있는 방법은 이렇게 설명해 볼 수 있다. : 특성값이 무작위로 나열되어 방에 들어온다. 방에 있는 모든 특성값은 게임에 참여한다(= 예측치에 기여한다). 특성값의 Shapley value는 특성값이 연합에 참여할때 이미 방에 있던 연합이 얻은 예측치의 평균적인 변화이다.
 
-## Estimating the Shapley Value
+## 4.3. Estimating the Shapley Value
 
 특성값의 모든 가능한 연합은 정확한 Shapley value를 계산하기위해서 j번째 특성이 있는 것과 없는 것 모두 평가되어야만 한다. 특성 수가 커짐에 따라 가능한 연합의 수가 기하급수적으로 늘어나기때문에 Shapley value를 계산하는 정확한 방법이 오히려 문제가 될 수 있다. Strumbelj et al. (2014)는 몬테카를로 샘플링(Monte-Carlo sampling)으로 추정치를 구하는 방법을 제안한다 [3].
 
 $$\hat{\phi}_{j}=\frac{1}{M}\sum_{m=1}^M\left(\hat{f}(x^{m}_{+j})-\hat{f}(x^{m}_{-j})\right)$$
 
-여기서 \hat{f}(x^{m}_{+j} 는 x에 대한 예측치이다. 단, 특성 j의 값에 대해서는 제외하고 나머지 특성값의 아무값을 무작위로 선정한 관측치 z로부터 특성값을 추출하여 대체하였다. x 벡터 x^{m}_{-j} 는 x^{m}_{+j}와 거의 비슷하다. 대신 x^{m}_{j} 또한 샘플링된 z로부터 대체된다. 각 M개의 새로운 관측치는 두 관측치로부터 형성된 "프랑켄슈타인 괴물(Frankenstein Monster)"같은 것이다. 
+여기서 $$\hat{f}(x^{m}_{+j})$$ 는 $$x$$에 대한 예측치이다. 단, 특성 $$j$$의 값에 대해서는 제외하고 나머지 특성값의 아무값을 무작위로 선정한 관측치 z로부터 특성값을 추출하여 대체하였다. $$x$$ 벡터 $$x^{m}_{-j} 는 x^{m}_{+j}$$와 거의 비슷하다. 대신 $$x^{m}_{j}$$ 또한 샘플링된 $$z$$로부터 대체된다. 각 $$M$$개의 새로운 관측치는 두 관측치로부터 형성된 "프랑켄슈타인 괴물(Frankenstein Monster)"같은 것이다. 
 
 **단일 특성치로부터 Shapley value의 추청치를 근사하게 구하는 방법** 
 
@@ -206,14 +206,14 @@ $$\hat{\phi}_{j}=\frac{1}{M}\sum_{m=1}^M\left(\hat{f}(x^{m}_{+j})-\hat{f}(x^{m}_
     - Draw random instance z from the data matrix X
     - Choose a random permutation o of the feature values
     - Order instance x: $$x_o=(x_{(1)},\dotsc,x_{(j)},\dotsc,x_{(p)})$$
-    - Order instance z: $$z_o=(z_{(1)},\dotsc,z_{(j)},\dotsc,z_{(p)})$$ test
+    - Order instance z: $$z_o=(z_{(1)},\dotsc,z_{(j)},\dotsc,z_{(p)})$$
     - Construct two new instances
         - With feature j: $$x_{+j}=(x_{(1)},\dotsc,x_{(j-1)},x_{(j)},z_{(j+1)},\dotsc,z_{(p)})$$ 
         - Without feature j: $$x_{-j}=(x_{(1)},\dotsc,x_{(j-1)},z_{(j)},z_{(j+1)},\dotsc,z_{(p)})$$ 
     - Compute marginal contribution: $$\phi_j^{m}=\hat{f}(x_{+j})-\hat{f}(x_{-j})$$ 
 - Compute Shapley value as the average: $$\phi_j(x)=\frac{1}{M}\sum_{m=1}^M\phi_j^{m}$$
 
-위 과정을 풀어서 설명하자면 첫 번째로 기여도를 구하고 싶은 특성 x의 관측치(instance of interest x), 특성 인덱스 j(a feature j) 그리고 반복횟수 M(the number of iterations M)을 구한다. 각 반복시마다 랜덤하게 뽑힌 관측치 z (a random instance z)가 데이터로부터 선택된다. 그리고 랜덤하게 특성을 나열한다. 두 번째는 앞서 뽑은 특성 x와 z를 랜덤하게 조합하여 새로운 관측치를 만든다. x_+j 는 기여도를 구하고싶은 특성이 포함된 관측치이고 이때 z로 우선 관측치를 나열하고 이후 j 번째 특성을 대체한다. x_-j는 이와 반대로 j번째 특성을 제외한다. 그리고 두 관측치를 통해 나온 예측값의 차이를 계산한다.
+위 과정을 풀어서 설명하자면 첫 번째로 기여도를 구하고 싶은 특성 x의 관측치(instance of interest $$x$$), 특성 인덱스 $$j$$(a feature $$j$$) 그리고 반복횟수 $$M$$(the number of iterations $$M$$)을 구한다. 각 반복시마다 랜덤하게 뽑힌 관측치 $$z$$ (a random instance $$z$$)가 데이터로부터 선택된다. 그리고 랜덤하게 특성을 나열한다. 두 번째는 앞서 뽑은 특성 $$x$$와 $$z$$를 랜덤하게 조합하여 새로운 관측치를 만든다. $$x_+j$$ 는 기여도를 구하고싶은 특성이 포함된 관측치이고 이때 z로 우선 관측치를 나열하고 이후 $$j$$ 번째 특성을 대체한다. $$x_-j$$는 이와 반대로 $$j$$번째 특성을 제외한다. 그리고 두 관측치를 통해 나온 예측값의 차이를 계산한다.
 
 정확한 계산과정에 대해서는 참고자료를 통해 확인하길 바란다.
 
@@ -225,7 +225,7 @@ $$\phi_j(x)=\frac{1}{M}\sum_{m=1}^M\phi_j^{m}$$
 
 모든 Shapley value는 이와같은 과정을 각 특성마다 반복하며 계산된다.
 
-# Advantages
+# 5. Advantages
 
 Shapley values의 Efficiency 속성에 따라 각 예측치와 평균 예측치간의 차이는 각 관측치의 특성값 사이에 공평하게 분포되어있다. 이 속성은 LIME같은 방법과 Shapley value를 구분해준다. LIME은 예측치가 특성들 간의 공평하게 분포되어 있지 않다. Shapley value는 **모델 전체를 완전히 설명할 수 있는 유일한 방법일 것이다.** Shapley value는 확고한 이론적 기반과 공평하게 효과가 분포해있기 때문에 [EU의 "right to explanations"](https://en.wikipedia.org/wiki/Right_to_explanation)와 같이 법률이 설명을 필요로하는 상황에서  사용할 수 있는 유일한 합법적인 방법일 것이다. 
 
@@ -235,7 +235,7 @@ Shapley value는 **이론적인 배경이 탄탄하다.** Efficiency, symmetric,
 
 특성값에 의한 게임으로 예측을 설명한다는 것이 정말 놀랍다.
 
-# Disadvantages
+# 6. Disadvantages
 
 Shapley value는 연산량이 너무 많다. 현실의 문제들 중 99.9%에서는 추정방법만이 사용가능하다. 특성들의 가능한 조합(2^k)과 특성의 "결측(absence)"은 아무 관측치로 대체하는 것(이로인해 Shapley value 추청값의 분산이 증가한다.)까지 모두 고려하기 때문에 연산 비용이 너무 크다. 연합의 지수적 크기는 샘플링과 반복횟수 M을 제한해서 대처할 수 있다. M을 줄이는 것만으로도 연산 시간을 줄일 수 있지만 Shapley value의 분산을 키울 수 있다. M에 대한 최적의 수가 따로 정해진건 없다. M은 Shapley value를 정확히 추정하기위해 크면 클 수록 좋다. 그러나 적당한 시간에 계산을 할 수 있는 정도로 정하면된다. [Chernoff bounds](http://math.mit.edu/~goemans/18310S15/chernoff-notes.pdf)를 기반으로 M을 선택할수도 있지만 기계 학습 예측을 위해 Shapley values를 구하는데 사용하는 경우는 본적이 없다.
 
@@ -249,7 +249,7 @@ Shapley value는 LIME과 다르게 설명가능한 모델이 아닌 단순히 �
 
 다른 permutation을 기반으로한 해석 방법들과 같이 Shapley value는 특성간 상관관계가 있는 경우 비현실적인 관측치를 포함하는 것에서 어려움이 있다. 연합에서 특성값이 누락되는 것을 시뮬레이션하기위해 특성치를 한계화(marginalize)한다. 이 과정은 특성치의 한계 분포(marginal distribution)에서 값을 샘플링하여 구할 수 있다. 이 방법은 특성들이 서로 독립이면 문제가 되지 않지만 독립이 아닌 경우에는 관측치에 맞지 않은 특성값을 추출하게 될 수 있다. 그러나 이 방법으로 특성에 대한 Shapley value를 구할 수 있다. 내가 아는 한에서는 이러한 방법이 Shapley value에 어떤 의미가 있는지 어떻게 수정할 수 있을까에 대한 연구가 없었다. 한가지 방법으로는 상관관계가 있는 특성들을 같이 permute하여 특성들에 대한 하나의 Shapley value를 구하는 것이다. 또는 상관관계가 있는 특성들을 고려해서 샘플링 과정을 조정하는 방법이 있을 수 있다.
 
-# Software and Alternatives
+# 7. Software and Alternatives
 
 Shapley value는 R 패키지인 `iml`에 구현되어있다.
 
@@ -257,7 +257,7 @@ Shapley value에 대해 대안으로 나온 추정 방법인 SHAP은 다음 챕�
 
 또다른 패키지는 `breakDown`이다 [5]. BreakDown은 예측치에 대한 각 특성의 기여도를 나타내고, step by step으로 계산한다. 다시 게임에 비유하자면 아무도 없는 팀에서 예측에 가장 큰 기여를 한 특성값을 하나씩 추가해가며 모든 특성이 추가될때까지 반복한다. 각 특성이 얼마나 기여를 했는지는 이미 팀에 있는 특성에 따라 결정되는데 이게 breakDown의 가장 큰 단점이다. Shalpey value 방법보다는 빠르고 교호작용이 없는 모델에 대해서만 결과가 똑같이 나온다.
 
-# Reference
+# 8. Reference
 
 [1] [A value for n-person games.” Contributions to the Theory of Games](https://medium.com/tokeonomy/%EA%B2%8C%EC%9E%84%EC%9D%B4%EB%A1%A0-%EB%B2%A0%EC%9D%B4%EC%A7%81-game-theory-basic-398bbfd4f87b)
 
