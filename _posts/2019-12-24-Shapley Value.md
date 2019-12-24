@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SHAP에 대한 모든 것 - part 1 : Shapley Values 알아보기"
+title:  "SHAP에 대한 모든 것 - part 1 : Shapley Values 알아보기 (temp)"
 date:   2019-12-24 05:09:00 +0800
 categories: Interpretable-Machine-Learning
 tags: XAI
