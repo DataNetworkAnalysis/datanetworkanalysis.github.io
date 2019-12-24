@@ -6,9 +6,11 @@ categories: Interpretable-Machine-Learning
 tags: XAI
 ---
 
+[1. 게임이론 (Game Thoery)](#1-게임이론-game-thoery)
+
 # 1. 게임이론 (Game Thoery)
 
-Shapley Value에 대해 알기위해서는 **게임이론**에 대해 먼저 이해해야한다. 게임이론이란 우리가 아는 게임을 말하는 것이 아닌 **여러 주제가 서로 영향을 미치는 상황에서 서로가 어떤 의사결정이나 행동을 하는지에 대해 이론화한 것**을 말한다. 즉, 아래 그림과 같은 상황을 말한다. [1]
+Shapley Value에 대해 알기위해서는 **게임이론**에 대해 먼저 이해해야한다. 게임이론이란 우리가 아는 게임을 말하는 것이 아닌 **여러 주제가 서로 영향을 미치는 상황에서 서로가 어떤 의사결정이나 행동을 하는지에 대해 이론화한 것**을 말한다. 즉, 아래 그림과 같은 상황을 말한다. [^1]
 
 <p align="center">
     <img src='https://drive.google.com/uc?id=1K45Zg29BBfQOPIvIBvoPCWxTHSW-wRhC'/>
@@ -259,7 +261,7 @@ Shapley value에 대해 대안으로 나온 추정 방법인 SHAP은 다음 챕�
 
 # 8. Reference
 
-[1] [A value for n-person games.” Contributions to the Theory of Games](https://medium.com/tokeonomy/%EA%B2%8C%EC%9E%84%EC%9D%B4%EB%A1%A0-%EB%B2%A0%EC%9D%B4%EC%A7%81-game-theory-basic-398bbfd4f87b)
+[^1] [A value for n-person games.” Contributions to the Theory of Games](https://medium.com/tokeonomy/%EA%B2%8C%EC%9E%84%EC%9D%B4%EB%A1%A0-%EB%B2%A0%EC%9D%B4%EC%A7%81-game-theory-basic-398bbfd4f87b)
 
 [2] Shapley, Lloyd S. “A value for n-person games.” Contributions to the Theory of Games 2.28 (1953): 307-317.
 
