@@ -13,7 +13,7 @@ tags: MachineLearning
 **Paper**: [The problem of concept drift: Deﬁnitions and related work](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.58.9085&rep=rep1&type=pdf)  
 **Year**: 2004   
 
-# Definitions and peculiarities of the problem
+# 1. Definitions and peculiarities of the problem
 
 Real world를 학습하기 어려운 이유는 바로 the concept of interest가 예측하기위해 사용된 변수가 아닌 어떤 `hidden context` 에 따라 달라질 수 있기 때문이다. 대표적으로는 날씨에 대한 예측이나 고객들의 선호도를 예로 들 수 있다. 
 
@@ -27,13 +27,13 @@ concept drift를 다루기위한 이상적인 방법은 크게 3가지가 있다
 2. *concept drift와 noise를 따로 구분하고 noise에 robust할 것*
 3. *반복되는 context를 확인하고 처리하는 것*
 
-# Types of concept drift
+# 2. Types of concept drift
 
 일반적으로 concept drift는 크게 두 가지 종류가 있다. 갑자기 생기거나 어느새 생기거나. 예를 들면 대학을 졸업하고 갑자기 금전적인 걱정이 생기게 되거나, 공장의 장비가 서서히 마모되어 품질에 영향이 생기는 경우이다. 
 
 어떤 context의 hidden change는 목표변수의 변화 때문일수도 있지만 데이터의 분포가 바뀌어서 일수도있다. 목표변수가 변하지 않더라도 데이터의 분포가 변하면 모델도 더이상 사용할 수가 없다. 이러한 분포 변화에 따른 모델 수정의 필요성을 `virtual concept drift` 라고 한다. Virtual concept drift와 real concept drift는 종종 함께 발생한다. 그러나 결론적으로 이 두 가지를 구분하는것은 사실 그렇게 중요하지 않다. 중요한 것은 concept drift가 발생했다면 모델은 수정되어야 한다는 것이다.
 
-# Systems for handling concept drift
+# 3. Systems for handling concept drift
 
 처음으로 concept drift를 시도한 것은 **STAGGER**, **FLORA** 그리고 **IB3** 일것이다. 이 세가지 방법은 사용할 수 있는 시스템이 서로 다르다. 
 
@@ -47,7 +47,7 @@ concept drift를 다루기위한 이상적인 방법은 크게 3가지가 있다
 
 **Ensenble learning**은 여러 예측값을 투표하거나 가장 연관이 있어보이는 것을 선택하는 방식으로 해서 concept description을 유지한다. **STAGGER**가 이러한 방식을 사용한다. Harries와 Sammut의 **conceptual clustering**은 같은 concept으로 분류되는 정도에 따라 유사도를 반영하여 instance를 군집하여 stable hidden context를 확인한다. Street과 Kim의 연구에서는 일정한 크기의 시퀀셜 데이터로 나누고 이 데이터들로 효율적인 concept drift를 다룰 수 있도록 enesemble하였다. Stanley와 Kolter 그리고 Maloof의 연구에서는 가장 최근의 instance를 구분할수 있도록 서로 다른 나이로 나누어 ensemble을 하였다. 
 
-# Base learning algorithms for handling concept drift
+# 4. Base learning algorithms for handling concept drift
 
 많은 학습 알고리즘들이 concept drift를 다루기위해 사용된다. 예를 들면 규칙 기반의 학습방법, 의사결정나무, SVM, 나이브베이즈, Radial Basis Functions-Networks 그리고 instance-based learning같이 것들이 있다. 
 
@@ -57,17 +57,17 @@ concept drift를 다루기위한 이상적인 방법은 크게 3가지가 있다
 
 Concept drift를 다루기위한 첫 instance-based learning 방법은 **IB3**이다. IB3는 정확히 분류된 것이 얼마나 있는지 확인하고 해당 클래스의 빈도수를 비교하여 noise가 있거나 오래된 케이스는 버리면서 케이스를 유지한다. IB3는 점진적인(gradual) concept drift에 대해서만 사용될 수 있고 적용이 상대적으로 느리다는 점에서 비판을 받았다. Salganicoff의 **Local Weighted Forgetting (LWF)**는 오래된 instance는 비활성화하지만 이것도 단지 유사한 새 instance가 나타났을때만 해당한다. **Prediction Error Context Switching (PECS)**는 **LWF**와 비슷하지만 instance에 대한 정확도를 고려한다. 그리고 추가적으로 재활성화에 필요한 instance를 저장할 수 있다. PECS와 LWF는 단순 윈도우 기반인 TWF보다 더 성능이 좋고 PECS가 지금까지 가장 성능이 좋다.  
 
-# Datasets for testing systems handling concept drift
+# 5. Datasets for testing systems handling concept drift
 
 concept drift를 평가하기 위한 가장 유명한 benchmark data로는 세 가지 특징값을 갖는 세 가지 Boolean concept를 포함한 STAGGER concept가 대표적이다. 또다른 유명한 benchmark는 hyperplane을 이동하는것이 대표적이다. STAGGER와 Hyperplane 문제는 concept drift, context recurrence, noise의 존재 그리고 부적절한 속성의 유형과 비율을 조정하는 것이 가능하다. Concept drift를 다루는 시스템을 평가하기 위해 몇몇 현실문제도 사용되었다. 예를 들면 filght simulator data, Web page access data the Text Retrieval Conference data, credit card fraud data, breast cancer, anonymous Web browing, US Census Bureau data, e-mail data들이 있다. 이런 현실문제들이 가진 중요한 문제점은 concept drift가 거의 없다는 것이다. 그리고 있다고 해서 의도적으로 만들어진경우이다. 예를 들면 TREC 데이터에서는 각 특정기간 동안 관련된 주제들에 대해서 하위 집합을 제한하였다. 
 
-# Incremental (online) learning versus batch learning
+# 6. Incremental (online) learning versus batch learning
 
 Concept drift를 다루기위한 대부분의 알고리즘은 batch learing과 반대로 **incremental learning**를 고려한다. **batch learning** 많은 instance를 모아서 한번에 학습하고 하나의 모델을 만든다. 반면에 incremental learning은 계속해서 새로운 instance에 대해서 update를 한다. Incremental learning은 실제 생활에서는 온라인에서 매번 새로운 데이터를 처리하기 때문에 더 적합하다고 볼 수 있다. 
 
 Batch concept drift learning은 (Harries et al., 1998; Klinkenberg, 2004)의 연구에서 단순성을 위해 고려되었다. Klinkenberg(2004)에서는 어떻게 이러한 SVM같은 알고리즘이 inclemental learning으로 바꿀 수 있을지 논의했었다.
 
-# Criteria for updating the current model
+# 7. Criteria for updating the current model
 
 Concept drift를 다루기위한 많은 알고리즘들은 새로운 데이터가 왔을때 일반적으로 사용하는 모델 업데이트 방식을 사용한다. 그러나 이러한 방법은 새로운 데이터의 양이 많은때 과도한 비용이 들게된다. 그리고 spam 분류같은 경우는 각 데이터에 대해서 정답이 달려야하기 때문에 많은 시간과 자원이 들게된다. 이러한 문제를 극복하기위한 방법으로는 필요한부분만 탐지하고 수정하여 반영하는것이다.  
 
@@ -85,6 +85,6 @@ Concept drift를 다루기위한 많은 알고리즘들은 새로운 데이터�
 
 이 기준들이 case base의 질을 높일 수 있는 좋은 기준이라고 하지만 역시나 현실에서는 시간에 따라 drift의 비율이나 noise의 수준이 급격하게 변하기때문에 적용하기는 힘들거같다고한다.
 
-# Conclusions
+# 8. Conclusions
 
 Concept drift는 기계학습 분야에서 앞으로도 더 중요하게 다뤄야할 문제가 될 것이다. 무엇보다 concept drift를 연구하는데 중요한것은 꼭 업데이트가 필요한 부분만 탐지할 수 있는 기준을 만드는 것이다. 현재까지 이 기준은 현실에 적용하기 힘들었으며 더 많은 연구가 필요한 부분이다.
