@@ -4,7 +4,7 @@ title:  "Deep Learning Tutorial"
 date:   2019-10-09 18:00:00 +0800
 categories: Workshop
 tags: MachineLearning DeepLearning
-images: images/default.jpg
+image: images/default.jpg
 ---
 
 **발표자**: Touch Too  

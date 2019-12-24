@@ -4,7 +4,7 @@ title:  "Jupyter notebook 확장팩 사용하기"
 date:   2019-09-30 17:20:00 +0800
 categories: Setting
 tags: Jupyter
-images: images/default.jpg
+image: images/default.jpg
 ---
 
 **jupyter notebook nbextensions**을 설치하면 기존 jupyter notebook에서 사용하지 못했던 다양한 기능들을 사용할 수 있습니다. **jupyter notebook 확장팩!**

@@ -4,7 +4,7 @@ title:  "지옥에서 돌아올뻔한 Github 가이드"
 date:   2019-12-13 1:13:00 +0800
 categories: Workshop
 tags: Github 
-images: images/github.jpg
+image: images/github.jpg
 ---
 
 **발표자**: Touch Too, SANGMAN PARK  
