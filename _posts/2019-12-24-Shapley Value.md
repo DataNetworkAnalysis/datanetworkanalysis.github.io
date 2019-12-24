@@ -196,7 +196,7 @@ $$\phi_j+\phi_j^{+}$$
 
 $$\hat{\phi}_{j}=\frac{1}{M}\sum_{m=1}^M\left(\hat{f}(x^{m}_{+j})-\hat{f}(x^{m}_{-j})\right)$$
 
-여기서 \hat_{f)(x^{m}_{+j} 는 x에 대한 예측치이다. 단, 특성 j의 값에 대해서는 제외하고 나머지 특성값의 아무값을 무작위로 선정한 관측치 z로부터 특성값을 추출하여 대체하였다. x 벡터 x^{m}_{-j} 는 x^{m}_{+j}와 거의 비슷하다. 대신 x^{m}_{j} 또한 샘플링된 z로부터 대체된다. 각 M개의 새로운 관측치는 두 관측치로부터 형성된 "프랑켄슈타인 괴물(Frankenstein Monster)"같은 것이다. 
+여기서 \hat{f}(x^{m}_{+j} 는 x에 대한 예측치이다. 단, 특성 j의 값에 대해서는 제외하고 나머지 특성값의 아무값을 무작위로 선정한 관측치 z로부터 특성값을 추출하여 대체하였다. x 벡터 x^{m}_{-j} 는 x^{m}_{+j}와 거의 비슷하다. 대신 x^{m}_{j} 또한 샘플링된 z로부터 대체된다. 각 M개의 새로운 관측치는 두 관측치로부터 형성된 "프랑켄슈타인 괴물(Frankenstein Monster)"같은 것이다. 
 
 **단일 특성치로부터 Shapley value의 추청치를 근사하게 구하는 방법** 
 
@@ -206,12 +206,12 @@ $$\hat{\phi}_{j}=\frac{1}{M}\sum_{m=1}^M\left(\hat{f}(x^{m}_{+j})-\hat{f}(x^{m}_
     - Draw random instance z from the data matrix X
     - Choose a random permutation o of the feature values
     - Order instance x: $$x_o=(x_{(1)},\ldots,x_{(j)},\ldots,x_{(p)})$$
-    - Order instance z: $z_o=(z_{(1)},\ldots,z_{(j)},\ldots,z_{(p)})$
+    - Order instance z: $$z_o=(z_{(1)},\ldots,z_{(j)},\ldots,z_{(p)})$$
     - Construct two new instances
-        - With feature j: $x_{+j}=(x_{(1)},\ldots,x_{(j-1)},x_{(j)},z_{(j+1)},\ldots,z_{(p)})$ 
-        - Without feature j: $x_{-j}=(x_{(1)},\ldots,x_{(j-1)},z_{(j)},z_{(j+1)},\ldots,z_{(p)})$ 
-    - Compute marginal contribution: $\phi_j^{m}=\hat{f}(x_{+j})-\hat{f}(x_{-j})$ 
-- Compute Shapley value as the average: $\phi_j(x)=\frac{1}{M}\sum_{m=1}^M\phi_j^{m}$
+        - With feature j: $$x_{+j}=(x_{(1)},\ldots,x_{(j-1)},x_{(j)},z_{(j+1)},\ldots,z_{(p)})$$ 
+        - Without feature j: $$x_{-j}=(x_{(1)},\ldots,x_{(j-1)},z_{(j)},z_{(j+1)},\ldots,z_{(p)})$$ 
+    - Compute marginal contribution: $$\phi_j^{m}=\hat{f}(x_{+j})-\hat{f}(x_{-j})$$ 
+- Compute Shapley value as the average: $$\phi_j(x)=\frac{1}{M}\sum_{m=1}^M\phi_j^{m}$$
 
 위 과정을 풀어서 설명하자면 첫 번째로 기여도를 구하고 싶은 특성 x의 관측치(instance of interest x), 특성 인덱스 j(a feature j) 그리고 반복횟수 M(the number of iterations M)을 구한다. 각 반복시마다 랜덤하게 뽑힌 관측치 z (a random instance z)가 데이터로부터 선택된다. 그리고 랜덤하게 특성을 나열한다. 두 번째는 앞서 뽑은 특성 x와 z를 랜덤하게 조합하여 새로운 관측치를 만든다. x_+j 는 기여도를 구하고싶은 특성이 포함된 관측치이고 이때 z로 우선 관측치를 나열하고 이후 j 번째 특성을 대체한다. x_-j는 이와 반대로 j번째 특성을 제외한다. 그리고 두 관측치를 통해 나온 예측값의 차이를 계산한다.
 
