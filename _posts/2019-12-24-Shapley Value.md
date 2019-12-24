@@ -206,7 +206,7 @@ $$\hat{\phi}_{j}=\frac{1}{M}\sum_{m=1}^M\left(\hat{f}(x^{m}_{+j})-\hat{f}(x^{m}_
     - Draw random instance z from the data matrix X
     - Choose a random permutation o of the feature values
     - Order instance x: $$x_o=(x_{(1)},\ldots,x_{(j)},\ldots,x_{(p)})$$
-    - Order instance z: $$z_o=(z_{(1)},\ldots,z_{(j)},\ldots,z_{(p)})$$
+    - Order instance z: $$z_o=(z_{(1)},\ldots,z_{(j)},\ldots,z_{(p)})$$ test
     - Construct two new instances
         - With feature j: $$x_{+j}=(x_{(1)},\ldots,x_{(j-1)},x_{(j)},z_{(j+1)},\ldots,z_{(p)})$$ 
         - Without feature j: $$x_{-j}=(x_{(1)},\ldots,x_{(j-1)},z_{(j)},z_{(j+1)},\ldots,z_{(p)})$$ 
