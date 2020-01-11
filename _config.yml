@@ -44,3 +44,7 @@ exclude:
 sass:
   style: compressed
 future: true
+
+hero:
+  image: /images/DNA_by_haneul.jpg
+  caption: Data, Network, Analysis
