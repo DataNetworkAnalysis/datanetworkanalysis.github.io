@@ -27,6 +27,7 @@ torcyray github : [https://github.com/facebookresearch/TorchRay](https://github.
 
 GradCAM example이라는데 내가 구현한거랑 방식이 굉장히 유사하다. 
 
+```python
     from torchray.attribution.grad_cam import grad_cam
     from torchray.benchmark import get_example_data, plot_example
     
@@ -38,6 +39,7 @@ GradCAM example이라는데 내가 구현한거랑 방식이 굉장히 유사하
     
     # Plots.
     plot_example(x, saliency, 'grad-cam backprop', category_id)
+```
 
 그래도 만들어 놓은게 있는데 이후에도 나는 계속 구현할 것이기 때문에 이것저걱 다 올려버리겠다는 각오로 우선 패키지를 만들고보자라는 생각으로 만들고 봤다.
 
@@ -70,6 +72,7 @@ Repo는 github에서 만들면된다. 만드는 부분은 여기서 생략하겠
 
 우선 setup.py를 통해서 기본 설정을 정해야한다. 아래 내용을 그대로 가져다 붙이고 각 옵션들을 본인에 코멘트로 달아놓은 설명에 맞게 본인 내용으로 작성하면된다. 첫 release라면 version은 0.1로 하는게 좋다.
 
+```python
     from setuptools import setup, find_packages
     
     with open('README.md', encoding='utf-8') as f: # README.md 내용 읽어오기
@@ -99,6 +102,7 @@ Repo는 github에서 만들면된다. 만드는 부분은 여기서 생략하겠
             "Topic :: Software Development :: Libraries :: Python Modules",
         ],
     )
+```
 
 만약 아래와 같이 PyPI project description에 내용을 달고 싶다면 [README.md](http://readme.md)에 작성한 후 아래 long_description을 꼭 작성해야한다. 
 
@@ -143,14 +147,19 @@ Release 파일을 만드는 방법은 간단하다 github repo에 들어가서 �
 
 이제 준비가 다 끝났으니 Project를 올리기만 하면된다. 아래와 같이 명령어를 입력하면 dist라는 폴더가 생기고 안에 **~~.whl** 이라는 파일이 생성된다.
 
+```bash
     python setup.py bdist_wheel
+```
 
 그리고나서 아래 명령어를 통해 PyPI에 업로드해주면 된다! 뒤에 .whl 파일은 **앞서 생성된 이름으로 바꿔넣도록 하자**
 
+```bash
     twine upload dist/tootorch-1.1-py3-none-any.whl
+```
 
 아래와 같이 username과 password를 입력하라고 나오는데 **PyPI 홈페이지**에서 회원가입하고 가입한 내용을 적으면 된다.
 
+```bash
     D:\bllfpc_github\tootorch>twine upload dist/tootorch-1.1-py3-none-any.whl
     Uploading distributions to https://upload.pypi.org/legacy/
     Enter your username: tootouch
@@ -160,6 +169,7 @@ Release 파일을 만드는 방법은 간단하다 github repo에 들어가서 �
     
     View at:
     https://pypi.org/project/tootorch/0.1/
+```
 
 # Import tootorch
 
@@ -175,6 +185,7 @@ Release 파일을 만드는 방법은 간단하다 github repo에 들어가서 �
 
 근데 PyPI에 있는 release파일을 삭제했는데도 그래서 이상하다하고 찾아봤더니 삭제했어도 같은이름은 안된다고한다. 그러면 방법은 단순하다. 
 
+```bash
     D:\bllfpc_github\tootorch>twine upload dist/tootorch-0.1-py3-none-any.whl
     Uploading distributions to https://upload.pypi.org/legacy/
     Enter your username: tootouch
@@ -183,8 +194,11 @@ Release 파일을 만드는 방법은 간단하다 github repo에 들어가서 �
     100%|█████████████████████████████████████████████████████████████| 33.5k/33.5k [00:01<00:00, 23.8kB/s]
     NOTE: Try --verbose to see response content.
     HTTPError: 400 Client Error: This filename has already been used, use a different version. See https://pypi.org/help/#file-name-reuse for url: https://upload.pypi.org/legacy/
+```
 
 그냥 whl 파일 이름을 다르게 변경하고 업로드하면 해결된다.
 
+```bash
     twine upload dist/tootorch-0.1-py3-none-any.whl # 이전이름
     twine upload dist/tootorch-1.1-py3-none-any.whl # 바꾼이름
+```
