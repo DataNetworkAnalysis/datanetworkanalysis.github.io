@@ -32,8 +32,9 @@ google_site_verification: "UA-153506145-1"
 disqus_shortname: "DNAteam"
 
 # Build settings
+github: [metadata]
 markdown: kramdown 
-gems:
+gems plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag
