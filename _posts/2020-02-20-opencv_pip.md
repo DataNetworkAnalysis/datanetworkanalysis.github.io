@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ubuntu에 opencv pip로 설치하기"
-date:   2020-02-06 17:29:00 +0800
+date:   2020-02-20 17:29:00 +0800
 categories: Setting
 tags: WorkSpace
 --- 
