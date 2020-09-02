@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "주간 DNA 소식지 개간!"
-date:   2019-09-01 00:00:00 +0800
+date:   2020-09-01 00:00:00 +0800
 categories: DNA-News
-tags: MachineLearning
+yms: 2020-09
 ---
 
 안녕하세요, 
