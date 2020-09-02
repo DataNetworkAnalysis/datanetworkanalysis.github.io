@@ -16,8 +16,10 @@
       {% for post in cat[1] %}
       <a class="post-title" href="{{site.baseurl}}{{post.url}}" target="_blank">
         <li>
-          {{post.title}} - {{post.author}}
-          <small class="post-date">{{post.date | date_to_string}}</small>
+          {{post.title}}
+          <p>  
+            <small class="post-date">Posted by {{post.date | date_to_string}} - {{post.date | date_to_string}}</small>
+          </p>
         </li>
       </a>
       {% endfor %}
