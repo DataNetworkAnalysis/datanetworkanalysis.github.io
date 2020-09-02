@@ -3,6 +3,7 @@ layout: post
 title:  "Outlier Detection Algorithm: Isolation Forest"
 date:   2020-04-01 12:59:00 +0800
 categories: Paper
+author: 박상민
 --- 
 
 본 내용은 Liu, Fei Tony; Ting, Kai Ming; Zhou, Zhi-Hua (December 2008). "Isolation Forest". 2008 Eighth IEEE International Conference on Data Mining: 413–422. 논문을 정리한 내용입니다.  원문은 [여기서](https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf?q=isolation-forest) 확인할 수 있습니다. 부족한 영어 실력으로 번역 및 정리한 내용이기 때문에 미흡한 부분이 존재할 수 있고 실제와 다르다면 피드백 부탁드립니다.

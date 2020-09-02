@@ -4,6 +4,7 @@ title:  "Python LightGBM GPU 버전 설치"
 date:   2019-11-13 11:47:00 +0800
 categories: Setting
 image: images/default.jpg
+author: 허재혁
 ---
 
 LightGBM은 요즘 안쓸래야 안쓸수가 없는 부스팅 모델 중 하나입니다. 그러나 GPU버전을 사용하지 않는다면 아무리 빨라도 제대로 사용하지 않는것이죠. 

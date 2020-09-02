@@ -3,6 +3,7 @@ layout: post
 title:  "Precision? Recall? 쉽게 알아보자!"
 date:   2020-04-28 18:23:00 +0800
 categories: Interpretable-Machine-Learning
+author: 박상민
 --- 
 
 # Introduction

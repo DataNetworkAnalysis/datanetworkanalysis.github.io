@@ -3,6 +3,7 @@ layout: post
 title:  "이상 탐지 넌 무엇이냐? #2"
 date:   2020-03-03 16:59:00 +0800
 categories: Paper
+author: 박상민
 --- 
 
 본 내용은 2018년 한국보건사회연구원 에서 출간한 '기계학습(Machine Learning)기반 이상 탐지(Anomaly Detection)기법 연구- 보건사회 분야를 중심으로' 연구보고서를 정리한 내용입니다.  원문은 [여기서](https://www.kihasa.re.kr/common/filedown.do?seq=41721) 확인할 수 있습니다.

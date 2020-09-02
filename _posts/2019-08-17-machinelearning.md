@@ -4,6 +4,7 @@ title:  "머신러닝 2일만에 완주하기"
 date:   2019-08-17 14:52:00 +0800
 categories: Workshop
 image: images/ML.jpg
+author: 허재혁
 ---
 
 **발표자**: Touch Too

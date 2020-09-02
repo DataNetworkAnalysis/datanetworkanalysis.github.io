@@ -3,6 +3,7 @@ layout: post
 title:  "pip package 만들기!"
 date:   2020-02-06 17:29:00 +0800
 categories: Setting
+author: 허재혁
 --- 
 
 # package 만들게된 동기

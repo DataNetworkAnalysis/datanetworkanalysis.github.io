@@ -3,6 +3,7 @@ layout: post
 title:  "SQL 정규화(Normalization)의 이해"
 date:   2020-03-06 18:08:00 +0800
 categories: SQL
+author: 박상민
 --- 
 
 # SQL 정규화(Normalization)
