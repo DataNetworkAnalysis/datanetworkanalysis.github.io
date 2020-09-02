@@ -11,6 +11,10 @@ js: ["post.js"]
         <span>
           <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Date">date_range</i>
           {{page.date | date: "%d/%m/%Y %H:%M"}}
+        </span>
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Author">perm_identity</i>
+          {{page.author}}
           <i id="indicate" class="right material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Show extra info">info</i>
         </span>
       </div>
