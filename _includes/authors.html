@@ -1,0 +1,27 @@
+<div class="col s12 author-div">
+  <div class="author-list">
+    {% for author in site.author %}
+    {% capture test %}{{author[0] | slice: 0}}{% endcapture %}
+    {% capture testup %}{{author[0] | slice: 0 | upcase}}{% endcapture %}
+    <a class="author-chip" href="#{{author[0] | slugify}}{% if test == testup %}_cap{% endif %}"><div class="chip z-depth-1">{{author[0]}}</div></a>
+    {% endfor %}
+  </div>
+  <div class="divider"></div>
+  <div class="author-index">
+    {% for author in site.author %}
+    {% capture test %}{{author[0] | slice: 0}}{% endcapture %}
+    {% capture testup %}{{author[0] | slice: 0 | upcase}}{% endcapture %}
+    <h4 id="{{author[0] | slugify}}{% if test == testup %}_cap{% endif %}">{{author[0]}}</h4>
+    <ul class="author-post">
+      {% for post in author[1] %}
+      <a class="post-title" href="{{site.baseurl}}{{post.url}}" target="_blank">
+        <li>
+          {{post.title}}
+          <small class="post-date">{{post.date | date_to_string}}</small>
+        </li>
+      </a>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</div>
