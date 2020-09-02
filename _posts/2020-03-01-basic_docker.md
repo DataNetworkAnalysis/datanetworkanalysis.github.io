@@ -3,7 +3,6 @@ layout: post
 title:  "Basic Docker in ubuntu 18.04"
 date:   2020-03-01 23:55:00 +0800
 categories: Setting
-tags: WorkSpace
 --- 
 
 Docker에 대한 기본 내용과 설치 방법 그리고 사용법에 대한 글입니다.

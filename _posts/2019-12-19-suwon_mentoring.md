@@ -3,7 +3,6 @@ layout: post
 title:  "고등학생때 알았더라면 좋았던 것들 (진로진학멘토링 후기)"
 date:   2019-12-19 19:06:00 +0800
 categories: Seminar
-tags: Mentoring
 image: images/default.jpg
 ---
 

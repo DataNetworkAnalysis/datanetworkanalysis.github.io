@@ -3,7 +3,6 @@ layout: post
 title:  "Deep Learning Tutorial"
 date:   2019-10-09 18:00:00 +0800
 categories: Workshop
-tags: MachineLearning DeepLearning
 image: images/default.jpg
 ---
 

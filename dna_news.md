@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "DNA News"
+title: "DNA NEWS"
 css: ["tags.css"]
 ---
-{% include dna_news.html %}
+{% include tags.html %}

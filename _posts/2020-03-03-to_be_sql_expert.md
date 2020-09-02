@@ -3,7 +3,6 @@ layout: post
 title:  "SQL 전문가되기 #1"
 date:   2020-03-03 05:01:00 +0800
 categories: SQL
-tags: WorkSpace
 --- 
 
 본 내용은 **SQL 전문가 가이드 2013 Edition의 과목2** 내용을 참고로하여 정리한 글 입니다.

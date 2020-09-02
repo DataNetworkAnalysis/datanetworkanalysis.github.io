@@ -3,7 +3,6 @@ layout: post
 title:  "Jupyter notebook 확장팩 사용하기"
 date:   2019-09-30 17:20:00 +0800
 categories: Setting
-tags: Jupyter
 image: images/default.jpg
 ---
 

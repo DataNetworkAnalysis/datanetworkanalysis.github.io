@@ -3,7 +3,6 @@ layout: post
 title:  "Python LightGBM GPU 버전 설치"
 date:   2019-11-13 11:47:00 +0800
 categories: Setting
-tags: Python MachineLearning
 image: images/default.jpg
 ---
 

@@ -3,7 +3,6 @@ layout: post
 title:  "2019 성남시 오픈 이노베이션 챌린지 후기"
 date:   2019-12-17 15:49:00 +0800
 categories: Contest
-tags: Innovation
 image: images/inno.jpg
 ---
 

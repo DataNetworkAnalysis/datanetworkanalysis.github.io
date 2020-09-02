@@ -3,7 +3,6 @@ layout: post
 title:  "머신러닝 2일만에 완주하기"
 date:   2019-08-17 14:52:00 +0800
 categories: Workshop
-tags: MachineLearning
 image: images/ML.jpg
 ---
 

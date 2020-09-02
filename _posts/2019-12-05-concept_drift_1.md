@@ -3,7 +3,6 @@ layout: post
 title:  "The problem of concept drift: Deﬁnitions and related work Korean Version (한국어버전)"
 date:   2019-12-05 1:37:00 +0800
 categories: Paper
-tags: MachineLearning
 image: images/default.jpg
 ---
 

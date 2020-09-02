@@ -3,7 +3,6 @@ layout: post
 title:  "SmoothGrad: removing noise by adding noise Korean Version(한국어버전)"
 date:   2019-10-23 3:32:00 +0800
 categories: Paper
-tags: XAI
 image: images/default.jpg
 ---
 
