@@ -3,6 +3,7 @@ layout: post
 title:  "주간 DNA 소식지 개간!"
 date:   2020-09-01 00:00:00 +0800
 tags: 2020-09
+author: 허재혁
 ---
 
 안녕하세요, 
