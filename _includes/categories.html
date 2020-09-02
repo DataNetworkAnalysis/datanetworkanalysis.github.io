@@ -16,8 +16,7 @@
       {% for post in cat[1] %}
       <a class="post-title" href="{{site.baseurl}}{{post.url}}" target="_blank">
         <li>
-          {{post.title}}
-          <p>{{site.author}}</p>
+          {{post.title}} - {{post.author}}
           <small class="post-date">{{post.date | date_to_string}}</small>
         </li>
       </a>
