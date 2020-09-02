@@ -1,23 +1,25 @@
 <div class="col s12 author-div">
   <div class="author-list">
-    {% for author in site.author %}
-    {% capture test %}{{author[0] | slice: 0}}{% endcapture %}
-    {% capture testup %}{{author[0] | slice: 0 | upcase}}{% endcapture %}
-    <a class="author-chip" href="#{{author[0] | slugify}}{% if test == testup %}_cap{% endif %}"><div class="chip z-depth-1">{{author[0]}}</div></a>
+    {% for aut in site.author %}
+    {% capture test %}{{aut[0] | slice: 0}}{% endcapture %}
+    {% capture testup %}{{aut[0] | slice: 0 | upcase}}{% endcapture %}
+    <a class="author-chip" href="#{{aut[0] | slugify}}{% if test == testup %}_cap{% endif %}"><div class="chip z-depth-1">{{aut[0]}}</div></a>
     {% endfor %}
   </div>
   <div class="divider"></div>
   <div class="author-index">
-    {% for author in site.author %}
-    {% capture test %}{{author[0] | slice: 0}}{% endcapture %}
-    {% capture testup %}{{author[0] | slice: 0 | upcase}}{% endcapture %}
-    <h4 id="{{author[0] | slugify}}{% if test == testup %}_cap{% endif %}">{{author[0]}}</h4>
+    {% for aut in site.author %}
+    {% capture test %}{{aut[0] | slice: 0}}{% endcapture %}
+    {% capture testup %}{{aut[0] | slice: 0 | upcase}}{% endcapture %}
+    <h4 id="{{aut[0] | slugify}}{% if test == testup %}_cap{% endif %}">{{aut[0]}}</h4>
     <ul class="author-post">
-      {% for post in author[1] %}
+      {% for post in aut[1] %}
       <a class="post-title" href="{{site.baseurl}}{{post.url}}" target="_blank">
         <li>
           {{post.title}}
-          <small class="post-date">{{post.date | date_to_string}}</small>
+          <p>  
+            <small class="post-date">Posted by {{post.author}} - {{post.date | date_to_string}}</small>
+          </p>
         </li>
       </a>
       {% endfor %}
