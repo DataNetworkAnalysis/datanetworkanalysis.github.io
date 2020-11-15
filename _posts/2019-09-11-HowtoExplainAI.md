@@ -2,7 +2,7 @@
 layout: post
 title:  "How to Explain AI (AI를 설명하는 방법)"
 date:   2019-09-11 3:17:00 +0800
-categories: Paper
+categories: Research
 image: images/default.jpg
 link: https://tootouch.github.io/research/HowtoExplainAI/
 author: 허재혁
