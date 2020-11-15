@@ -14,14 +14,25 @@
     <h4 id="{{cat[0] | slugify}}{% if test == testup %}_cap{% endif %}">{{cat[0]}}</h4>
     <ul class="cat-post">
       {% for post in cat[1] %}
-      <a class="post-title" href="{{site.baseurl}}{{post.url}}" target="_blank">
-        <li>
-          {{post.title}}
-          <p>  
-            <small class="post-date">Posted by {{post.author}} - {{post.date | date_to_string}}</small>
-          </p>
-        </li>
-      </a>
+        {% if post.link %}
+          <a class="post-title" href="{{post.link}}" target="_blank">
+            <li>
+              {{post.title}}
+              <p>  
+                <small class="post-date">Posted by {{post.author}} - {{post.date | date_to_string}}</small>
+              </p>
+            </li>
+          </a>
+        {% else %}
+          <a class="post-title" href="{{site.baseurl}}{{post.url}}" target="_blank">
+            <li>
+              {{post.title}}
+              <p>  
+                <small class="post-date">Posted by {{post.author}} - {{post.date | date_to_string}}</small>
+              </p>
+            </li>
+          </a>
+        {% endif %}
       {% endfor %}
     </ul>
     {% endfor %}
