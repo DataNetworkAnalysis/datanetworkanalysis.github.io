@@ -3,6 +3,7 @@ layout: post
 title:  "Basic Docker in ubuntu 18.04"
 date:   2020-03-01 23:55:00 +0800
 categories: Setting
+link: https://tootouch.github.io/setting/basic_docker/
 author: 허재혁
 --- 
 

@@ -4,6 +4,7 @@ title:  "Python LightGBM GPU 버전 설치"
 date:   2019-11-13 11:47:00 +0800
 categories: Setting
 image: images/default.jpg
+link: https://tootouch.github.io/setting/lightgbm_gpu/
 author: 허재혁
 ---
 

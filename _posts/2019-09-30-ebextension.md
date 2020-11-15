@@ -4,6 +4,7 @@ title:  "Jupyter notebook 확장팩 사용하기"
 date:   2019-09-30 17:20:00 +0800
 categories: Setting
 image: images/default.jpg
+link: https://tootouch.github.io/setting/ebextension/
 author: 허재혁
 ---
 

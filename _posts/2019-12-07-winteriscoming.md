@@ -4,6 +4,7 @@ title:  "딥러닝의 한계? 딥러닝의 겨울이 다시 올까?"
 date:   2019-12-07 20:42:00 +0800
 categories: Seminar
 image: images/default.jpg
+link: https://tootouch.github.io/conference%20review/winteriscoming/
 author: 허재혁
 ---
 

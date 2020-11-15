@@ -3,6 +3,7 @@ layout: post
 title:  "Kaggle Competition Pipeline 따라잡기"
 date:   2020-02-29 05:06:00 +0800
 categories: Setting
+link: https://tootouch.github.io/setting/kaggle_compitition_pipeline/
 author: 허재혁
 --- 
 
