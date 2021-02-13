@@ -4,6 +4,6 @@ title:  "파이토치 모델 결과 재구성하기 (Pytorch Reproduction Experi
 date:   2020-10-14 12:00:00 +0800
 categories: Experiment
 image: images/default.jpg
-link: https://tootouch.github.io/setting/notionist/
+link: https://tootouch.github.io/experiment/reproduction_pytorch/
 author: 허재혁
 ---
